@@ -1,0 +1,122 @@
+  
+.slickContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 600px;
+    /* border: 1px solid red; */
+  }
+.slickH1 {
+    color: #4d4d4d;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.5;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    width:700px;
+    text-shadow:
+    1px 1px 2px rgba(3, 9, 43, 0.5),    /* Highlight */
+    -1px -1px 2px rgba(0, 0, 0, 0.25),       /* Top-left shadow */
+    1px -1px 2px rgba(0, 0, 0, 0.25),        /* Top-right shadow */
+    -1px 1px 2px rgba(0, 0, 0, 0.25),        /* Bottom-left shadow */
+    0 0 3px rgba(0, 0, 0, 0.1);              /* Central soft shadow */
+
+  }
+  
+ .slickH1 .slickSpan {
+    font-size: 3rem;
+    margin-left: 40px;
+    text-shadow:
+    1px 1px 2px rgba(255, 255, 255, 0.5),    /* Highlight */
+    -1px -1px 2px rgba(0, 0, 0, 0.25),       /* Top-left shadow */
+    1px -1px 2px rgba(0, 0, 0, 0.25),        /* Top-right shadow */
+    -1px 1px 2px rgba(0, 0, 0, 0.25),        /* Bottom-left shadow */
+    0 0 3px rgba(0, 0, 0, 0.1);              /* Central soft shadow */
+
+  }
+  
+  .message {
+    background-color: rgba(255, 255, 0, 0.521);
+    color: #4d4d4d;
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    font-weight: 900;
+    overflow: hidden;
+    position: absolute;
+    padding-left: 0.5rem;
+    /* top: 0.2rem; */
+    right: 0;
+    left: fit-content;
+    animation: openclose 15s ease-in-out infinite;
+    /* border: 1px solid orange; */
+    width: 800px;
+    text-shadow:
+    1px 1px 2px rgba(255, 255, 255, 0.5),    /* Highlight */
+    -1px -1px 2px rgba(0, 0, 0, 0.25),       /* Top-left shadow */
+    1px -1px 2px rgba(0, 0, 0, 0.25),        /* Top-right shadow */
+    -1px 1px 2px rgba(0, 0, 0, 0.25),        /* Bottom-left shadow */
+    0 0 3px rgba(0, 0, 0, 0.1);              /* Central soft shadow */
+
+  }
+  
+  .word1, .word2, .word3 {
+    margin-top: -0.16rem;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  @keyframes openclose {
+    /* Word1 - LIFE */
+    0%, 100% {
+        width: 0;
+        top: 4px;
+        opacity: 0;
+    }
+    5%, 30% {
+        width: 145px;
+        top: 4px;   /* 0.1rem * 16 = 1.6px */
+        opacity: 1;
+    }
+    35% {
+        width: 0;
+        top: 4px;
+        opacity: 0;
+    }
+    40% {
+        width: 0;
+        top: -67.2px;  /* -4.2rem * 16 = -67.2px */
+        opacity: 0;
+    }
+
+    /* Word2 - PRICE */
+    42%, 67% {
+        width: 190px;
+        top: -67.2px;
+        opacity: 1;
+    }
+    72% {
+        width: 0;
+        top: -67.2px;
+        opacity: 0;
+    }
+    74% {
+        width: 0;
+        top: -136.4px;
+        opacity: 0;
+    }
+
+    /* Word3 - EXPERIENCE */
+    76%, 92% {
+        width: 348px;
+        top: -136.4px;
+        opacity: 1;
+    }
+    94%, 97%, 100% {
+        width: 0;
+        top: -136.4px;
+        opacity: 0;
+    }
+}

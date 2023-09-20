@@ -1,0 +1,272 @@
+.nav {
+    position: sticky;
+    top: 0;
+    padding: 1rem;
+    background-color: black;
+    z-index: 9;
+    
+
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navContainer>div {
+    display: flex;
+}
+
+.navItem {
+display: inline-block;
+    margin-left: 3%;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+ 
+  
+}
+
+.navItem:hover {
+    color: gold;
+    transition: 0.5s ease;
+}
+
+@keyframes fadeInLeftwards {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOutRightwards {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+}
+
+
+.navItemHamburger {
+    padding-right: 32px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    box-sizing: border-box;
+    transform: translateX(100%);
+    height:min-content;
+    position: absolute; 
+    top: 100%; /* This will position it right below the nav */
+    left: 0;
+    right: 0; /* This makes it span the full width */
+    z-index: 11;
+    transition: transform 0.5s ease-out;
+    opacity: 0;
+}
+
+.navItemHamburger span {
+    opacity: 0;
+    animation: fadeInLeftwards 0.5s forwards;
+    animation-delay: calc(0.15s * (var(--index) + 1));
+    transform: translateX(30px);
+    transition: transform 0.5s ease-out;
+}
+
+.navItemHamburger.open {
+    opacity: 1;
+    transform: translateX(0);  /* slide it back to its original position */
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;  /* animate it */
+}
+
+.navItemHamburger.closing span {
+    animation: fadeOutRightwards 0.5s forwards;
+    animation-delay: calc(0.15s * (var(--index) + 1));
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+
+
+.hamburger {
+    text-align: right;
+    display: none;
+    width: 85vw;
+    
+}
+
+.hamburgerButton {
+    background-color: transparent;
+    margin: 0;
+    border: none;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.hamburgerButton:hover div {
+    background: transparent;
+}
+
+
+
+.title {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 1rem;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 1px;
+    line-height:0;
+    text-decoration: none;
+  }
+
+ 
+  .title > h6 {
+    background-image: url('/images/contactFire.gif');
+    background-size: cover;
+    color: white;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    font-size: large;
+    margin: 20px 0;
+  
+ 
+  }
+
+
+  /* .link {
+      color: green;
+      text-decoration: none;
+      text-shadow:
+  0 0 2px rgba(202,228,225,0.92),
+  0 0 10px rgba(202,228,225,0.34),
+  0 0 4px rgba(30,132,242,0.52),
+  0 0 7px rgba(30,132,242,0.92),
+  0 0 11px rgba(30,132,242,0.78),
+  0 0 16px rgba(30,132,242,0.92);
+  }
+  
+
+  .link:focus,
+  .link:hover {
+    text-decoration: none;
+  color: #c6e2ff;
+  } */
+
+  .hamburgerButton .navContainer>div {
+    display: none;
+    /* Hide the regular menu items on medium screen */
+}
+
+.hamburgerButton .navContainer>button {
+    display: block;
+    /* Show the hamburger button on medium screen */
+}
+
+
+/* Laptop */
+  @media screen and (max-width: 1439px) {
+    .nav { border: 2px solid red;}
+    .navItem {
+        display: inline-block;
+        margin-left: 3%;
+        padding: 0.1em;
+        font-size: larger;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .nav { border: 2px solid orange;}
+    .navItem {
+        padding: 0;
+        font-size:small;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .nav { 
+        border: 2px solid yellow;
+    background-color: transparent;
+    }
+    .navContainer>div {
+        display: none;
+        background-color: transparent;
+    }
+    .navItem {
+        display: block; /* Added this line */
+        padding: 0;
+        font-size: small;
+        align-items: right;
+    }
+    .navItemHamburger {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: flex-end;
+        width: 100%;
+        /* border: 1px solid cyan; */
+        background-color: transparent;
+        transition: transform 0.5s ease-out;
+    }
+    .navItemHamburger span {
+    opacity: 0.1;
+        transform: translateY(0);
+    }
+    .navContainer>button {
+        display: block;
+    }
+    .hamburger {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .nav { border: 2px solid green;}
+    .navItem {
+        padding: 0;
+        font-size:small;
+    }
+}
+
+@media screen and (max-width: 319px) {
+    .nav { border: 2px solid blue;}
+    .navItem {
+        padding: 0;
+        font-size:small;
+    }
+}
+
+/* @media screen and (min-width: 769px) {
+    .navContainer>div {
+        display: block;
+        background-color: transparent !important;
+    }
+    .navContainer>button {
+        display: none;
+    }
+    .navItemHamburger {
+        flex-direction: column;
+    }
+}
+
+
+     */

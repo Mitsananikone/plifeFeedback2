@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #2119B4;
+  --color-secondary: #393e46;
+  --color-accent: #ff5722;
+  --color-highlight: #eeeeee;
+  --color-dark: #222631; --max-width: 1100px;
+  --border-radius: 4rem;
+  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+}
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  z-index: -10;
+  
+
+}
+
+a {
+  text-decoration: none;
+}
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  z-index: -9;
+}
+
+.bounds {
+  border: 1px solid red;
+}
+
+.b1{ border: 1px solid red;}
+.b2{ border: 1px solid orange;}
+.b3{ border: 1px solid yellow;}
+.b4{ border: 1px solid green;}
+.b5{ border: 1px solid blue;}
+
+
+.custom-bullet-list {
+  list-style-type: none;
+  /* To remove the default bullet point */
+  padding-left: 0;
+  /* Adjust this value to achieve desired spacing */
+}
+
+.custom-bullet-list li {
+  background-image: url('/images/iconDot.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 40px;
+  margin-bottom: 15px;
+  background-size: 20px;
+}
+
+.required {
+  color: red;
+}
+
+.full-flex-centered {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+  z-index: 0;
+}
+
+.container {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.logo {
+  height: 2em;
+  width: 2.5em;
+  margin-top: -1.2em;
+  margin-left: 4em;
+  scale: 2.5;
+  z-index: 4;
+}
+
+.page-enter {
+  opacity: 0.5;
+}
+
+.page-enter-active {
+  opacity: 1;
+  transition: opacity 400ms ease-in;
+}
+
+.page-exit {
+  opacity: 1;
+}
+
+.page-exit-active {
+  opacity: 0;
+  transition: opacity 800ms ease-in;
+}
+
+.backgroundChange {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  margin-top: -4em;
+  position: relative;
+  overflow: hidden; 
+}
+
+.backgroundChange-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  opacity: 0; /* start with 0 opacity */
+  transition: opacity 2s ease-in-out;
+}
+
+.backgroundChange-image.visible {
+  opacity: 1; /* full visibility */
+}
+
+.backgroundChange-image.fadeOut {
+  opacity: 0;
+}

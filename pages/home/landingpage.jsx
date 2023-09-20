@@ -1,0 +1,207 @@
+/** @format */
+
+// React and hooks imports
+import { useState, useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+// Components imports
+import Slick from "@/components/home/slick/slick";
+// import AnimInfoCard from "@/components/animInfoCard/animInfoCard";
+
+// Styles import
+import styles from "./landingPage.module.css";
+
+const FadeInSection = ({ children }) => {
+    const controls = useAnimation();
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.01,
+    });
+
+    useEffect(() => {
+        if (inView) controls.start("visible");
+    }, [controls, inView]);
+
+    return (
+        <motion.div
+            ref={ref}
+            animate={controls}
+            initial="hidden"
+            variants={{
+                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, y: 200 },
+            }}
+            transition={{ duration: 2, ease: "easeOut", delay: 0.4 }}
+        >
+            {children}
+        </motion.div>
+    );
+};
+
+const Slideshow = () => {
+    const images = [
+        "/images/home/home1.jpg",
+        "/images/home/home2.jpg",
+        "/images/home/home3.jpg",
+    ];
+
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }, 10000);
+
+        return () => clearInterval(interval);
+    }, []);
+
+    return (
+        <section>
+            <div className="backgroundChange">
+                {images.map((img, index) => (
+                    <div
+                        key={img}
+                        style={{ backgroundImage: `url(${img})` }}
+                        className={`backgroundChange-image ${
+                            index === currentImageIndex ? "visible" : ""
+                        }`}
+                    ></div>
+                ))}
+                <div
+                    style={{
+                        marginTop: "25%",
+                        transform: "scale(1.8)",
+                        opacity: "0.8",
+                    }}
+                >
+                    <Slick />
+                </div>
+            </div>
+        </section>
+    );
+};
+
+const LandingPage = () => {
+  return (
+    <div className={styles.landingPage}>
+      <Slideshow />
+
+      <FadeInSection>
+        <section className={styles.section}>
+          <div
+            className={styles.section_image}
+            style={{ backgroundImage: "url('/images/home/section1/section1Background.png')" }}
+          >
+            <h2 className={styles.sectionTitle}>
+              Exclusive Plastic Surgery Packages
+            </h2>
+          </div>
+
+          <motion.div
+            className={styles.section_text}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+          >
+            <div className={styles.packages}>
+              <motion.div
+                className={styles.package}
+                initial={{ y: 10, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.2 }}
+              >
+                {/* <AnimInfoCard
+                  backgroundImage="/images/home/section1/surgery1.png"
+                  title="Package 1"
+                  body="Experience seamless medical care with our surgery package, complete with travel arrangements and a stay in luxury accommodation, tailored just for you."
+                /> */}
+              </motion.div>
+
+              <motion.div
+                className={styles.package}
+                initial={{ y: 10, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.4 }}
+              >
+                {/* <AnimInfoCard
+                  backgroundImage="/images/home/section1/surgery2.png"
+                  title="Package 2"
+                  body="Unlock unparalleled savings with our dual-surgery package; we handle all your travel needs and ensure your recovery in opulent accommodation."
+                /> */}
+              </motion.div>
+
+              <motion.div
+                className={styles.package}
+                initial={{ y: 10, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.6 }}
+              >
+                {/* <AnimInfoCard
+                  backgroundImage="/images/home/section1/surgery3.png"
+                  title="Package 3"
+                  body="Embrace the pinnacle of value with our triple-surgery offer: extensive medical procedures combined with premium travel and the finest luxury lodgings, all at an unbeatable rate."
+                /> */}
+              </motion.div>
+            </div>
+          </motion.div>
+        </section>
+      </FadeInSection>
+
+      <FadeInSection>
+        <section className={styles.section}>
+          <div
+            className={styles.section_image}
+            style={{ backgroundImage: `url('/images/home/section2/section2Background.png')` }}
+          ></div>
+          <div className={styles.section_text}>
+            <h2>Luxurious, Seamless Journeys</h2>
+            <p>
+              Relinquish the stresses of travel. From your baggage check-in to
+              the welcoming embrace of your resort, to every scenic drive in
+              between, be chauffeured with grace. Revel in the serenity of our
+              all-inclusive travel experience.
+            </p>
+          </div>
+        </section>
+      </FadeInSection>
+
+      <FadeInSection>
+        <section className={styles.section}>
+          <div
+            className={styles.section_image}
+            style={{ backgroundImage: `url('/images/home/section3/section3Background.png')` }}
+          ></div>
+          <div className={styles.section_text}>
+            <h2>Guidance from World-Renowned Thai Surgeons</h2>
+            <p>
+              Embark on your transformational journey with the finest surgical
+              maestros of Thailand. Their unmatched expertise ensures
+              you&apos;re always in safe hands, guiding you every step of the
+              way, molding dreams into reality.
+            </p>
+          </div>
+        </section>
+      </FadeInSection>
+
+      <FadeInSection>
+        <section className={styles.section}>
+          <div
+            className={styles.section_image}
+            style={{ backgroundImage: `url('/images/home/section4/section4Background.png')` }}
+          ></div>
+          <div className={styles.section_text}>
+            <h2>Unwavering Post-Surgery Aftercare</h2>
+            <p>
+              Post-operative care is a testament to our commitment. We pledge to
+              cradle you with attention, ensuring swift recovery, comfort, and
+              peace of mind. Because your well-being is at the heart of what we
+              do.
+            </p>
+          </div>
+        </section>
+      </FadeInSection>
+    </div>
+  );
+};
+
+export default LandingPage;
