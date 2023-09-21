@@ -28,12 +28,13 @@ html, body {
   border: 0;
   z-index: -10;
   
-
 }
 
-a {
+h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
 }
+
+
 .background {
   display: flex;
   justify-content: center;
@@ -103,7 +104,7 @@ a {
 }
 
 .page-enter {
-  opacity: 0.5;
+  opacity: 0.1;
 }
 
 .page-enter-active {
