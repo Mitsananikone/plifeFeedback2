@@ -1,122 +1,292 @@
-  
-.slickContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 10vh;
-    width: 600px;
-    /* border: 1px solid red; */
+  .slickContainer {
+    margin: 0;
+    padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 15vh;
+      width: 100vw;
+      /* border: 1px solid red; */
+     
+      --word-width1: 145px;
+      --word-width2: 190px;
+      --word-width3: 348px;
+      --word-height: 4.2rem;
   }
-.slickH1 {
-    color: #4d4d4d;
-    font-family: 'Roboto', sans-serif;
-    font-size: 3rem;
-    font-weight: 900;
-    line-height: 1.5;
-    text-transform: uppercase;
-    white-space: nowrap;
-    overflow: hidden;
-    position: relative;
-    width:700px;
-    text-shadow:
-    1px 1px 2px rgba(3, 9, 43, 0.5),    /* Highlight */
-    -1px -1px 2px rgba(0, 0, 0, 0.25),       /* Top-left shadow */
-    1px -1px 2px rgba(0, 0, 0, 0.25),        /* Top-right shadow */
-    -1px 1px 2px rgba(0, 0, 0, 0.25),        /* Bottom-left shadow */
-    0 0 3px rgba(0, 0, 0, 0.1);              /* Central soft shadow */
+
+  .slickInside {
+    
+      /* border: 1px solid red; */
+      width: 100vw;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
   }
-  
- .slickH1 .slickSpan {
-    font-size: 3rem;
-    margin-left: 40px;
-    text-shadow:
-    1px 1px 2px rgba(255, 255, 255, 0.5),    /* Highlight */
-    -1px -1px 2px rgba(0, 0, 0, 0.25),       /* Top-left shadow */
-    1px -1px 2px rgba(0, 0, 0, 0.25),        /* Top-right shadow */
-    -1px 1px 2px rgba(0, 0, 0, 0.25),        /* Bottom-left shadow */
-    0 0 3px rgba(0, 0, 0, 0.1);              /* Central soft shadow */
+
+  .slickH1 {
+    width: 100vw;
+      margin-right: auto;
+      color: #4d4d4d;
+      font-family: 'Roboto', sans-serif;
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 1.5;
+      text-transform: uppercase;
+      white-space: normal;
+      overflow: hidden;
+
+      text-shadow:
+          1px 1px 2px rgba(3, 9, 43, 0.5),
+          /* Highlight */
+          -1px -1px 2px rgba(0, 0, 0, 0.25),
+          /* Top-left shadow */
+          1px -1px 2px rgba(0, 0, 0, 0.25),
+          /* Top-right shadow */
+          -1px 1px 2px rgba(0, 0, 0, 0.25),
+          /* Bottom-left shadow */
+          0 0 3px rgba(0, 0, 0, 0.1);     
+          position: relative;
+
+          
+  }
+
+  .slickSpan {
+      /* color: red; */
+      /* border: 1px solid pink; */
+      
+      position: relative;
+  }
+
+  .slickH1 .slickSpan {
+      font-size: 3rem;
+      text-shadow:
+          1px 1px 2px rgba(255, 255, 255, 0.5),
+          /* Highlight */
+          -1px -1px 2px rgba(0, 0, 0, 0.25),
+          /* Top-left shadow */
+          1px -1px 2px rgba(0, 0, 0, 0.25),
+          /* Top-right shadow */
+          -1px 1px 2px rgba(0, 0, 0, 0.25),
+          /* Bottom-left shadow */
+          0 0 3px rgba(0, 0, 0, 0.1);
+      /* Central soft shadow */
+
+      
 
   }
-  
+
+  .slickH1 .slickSpan, .message {
+    
+      display: inline-block;
+  }
+
   .message {
-    background-color: rgba(255, 255, 0, 0.521);
-    color: #4d4d4d;
-    font-family: 'Roboto', sans-serif;
-    display: block;
-    font-weight: 900;
-    overflow: hidden;
-    position: absolute;
-    padding-left: 0.5rem;
-    /* top: 0.2rem; */
-    right: 0;
-    left: fit-content;
-    animation: openclose 15s ease-in-out infinite;
-    /* border: 1px solid orange; */
-    width: 800px;
-    text-shadow:
-    1px 1px 2px rgba(255, 255, 255, 0.5),    /* Highlight */
-    -1px -1px 2px rgba(0, 0, 0, 0.25),       /* Top-left shadow */
-    1px -1px 2px rgba(0, 0, 0, 0.25),        /* Top-right shadow */
-    -1px 1px 2px rgba(0, 0, 0, 0.25),        /* Bottom-left shadow */
-    0 0 3px rgba(0, 0, 0, 0.1);              /* Central soft shadow */
+      /* background-color: rgba(255, 255, 0, 0.521); */
+      color: #4d4d4d;
+      font-family: 'Roboto', sans-serif;
+      display: block;
+      font-weight: 900;
+      overflow: hidden;
+      position: absolute;
+      right: -100%;  /* Start off the screen */
+      top: 0;
+      animation: slideIn 15s ease-in-out infinite;
+      width: min-content;
+      /* padding-left: 0rem; */
+      /* top: 0.2rem; */
+      right: 0;
+      /* left: fit-content; */
+      animation: openclose 15s ease-in-out infinite;
+      /* border: 1px solid orange; */
+      text-shadow:
+          1px 1px 2px rgba(255, 255, 255, 0.5),
+          /* Highlight */
+          -1px -1px 2px rgba(0, 0, 0, 0.25),
+          /* Top-left shadow */
+          1px -1px 2px rgba(0, 0, 0, 0.25),
+          /* Top-right shadow */
+          -1px 1px 2px rgba(0, 0, 0, 0.25),
+          /* Bottom-left shadow */
+          0 0 3px rgba(0, 0, 0, 0.1);
+      /* Central soft shadow */
 
   }
-  
+
   .word1, .word2, .word3 {
-    margin-top: -0.16rem;
-    font-family: 'Roboto', sans-serif;
+  
+      margin-top: -0.165rem;
+      padding-left: 2rem;
+     /* width:fit-content; */
+      font-family: 'Roboto', sans-serif;
   }
+
+  .slickContainer, .slickInside {
+    margin: 0;
+    padding: 0;
+}
 
   @keyframes openclose {
-    /* Word1 - LIFE */
-    0%, 100% {
-        width: 0;
-        top: 4px;
-        opacity: 0;
+
+      /* Word1 - LIFE */
+      0%, 100% {
+          width: 0;
+          top: 4px;
+          opacity: 0;
+      }
+
+      5%, 30% {
+        width: var(--word-width1);
+          
+          top: 4px;
+          /* 0.1rem * 16 = 1.6px */
+          opacity: 1;
+      }
+
+      35% {
+          width: 0;
+          /* width: fit-content; */
+          top: 4px;
+          opacity: 0;
+      }
+
+      40% {
+          width: 0;
+          /* width: fit-content; */
+          top: -67.2px;
+          /* -4.2rem * 16 = -67.2px */
+          opacity: 0;
+      }
+
+      /* Word2 - PRICE */
+      42%, 67% {
+          width: 190px;
+          width: var(--word-width2);
+          top: -67.2px;
+          opacity: 1;
+      }
+
+      72% {
+          width: 0;
+          /* width: fit-content; */
+          top: -67.2px;
+          opacity: 0;
+      }
+
+      74% {
+          width: 0;
+          /* width: fit-content; */
+          top: -136.4px;
+          opacity: 0;
+      }
+
+      /* Word3 - EXPERIENCE */
+      76%, 92% {
+          width: 348px;
+          width: var(--word-width3);
+          top: -135px;
+          opacity: 1;
+      }
+
+      94%, 97%, 100% {
+          width: 0;
+          /* width: fit-content; */
+          top: -135px;
+          opacity: 0;
+      }
+  }
+
+  @media screen and (min-width: 1440px) {
+      .slickH1 {
+        transform: scale(1);
     }
-    5%, 30% {
-        width: 145px;
-        top: 4px;   /* 0.1rem * 16 = 1.6px */
-        opacity: 1;
+  }
+
+  @media screen and (max-width: 1439px) {
+      .slickH1 {
+        transform: scale(1.2);
     }
-    35% {
-        width: 0;
-        top: 4px;
-        opacity: 0;
-    }
-    40% {
-        width: 0;
-        top: -67.2px;  /* -4.2rem * 16 = -67.2px */
-        opacity: 0;
+  }
+
+  @media screen and (max-width: 991px) {
+      .slickH1 {
+          scale: 0.8;
+      }
+  }
+
+  @media screen and (max-width: 767px) {
+      .slickContainer {
+          /* background-color: red; */
+          width: 100%;
+      }
+
+      .message {
+          width: 100%;
+          /* Use full width */
+      }
+
+      .slickH1 {
+
+          width: 100%;
+      }
+  }
+
+  @media screen and (max-width: 548px) {
+      .slickContainer {
+          /* background-color: blue; */
+          width: 100%;
+      }
+
+      .message {
+        
+          width: 100%;
+          /* Use full width */
+      }
+
+      .slickH1 {
+          scale: 0.6;
+          width: 100%;
+      }
+  }
+
+
+  @media screen and (max-width: 479px) {
+    .slickContainer {
+        /* background-color: red; */
+        width: 100%;
     }
 
-    /* Word2 - PRICE */
-    42%, 67% {
-        width: 190px;
-        top: -67.2px;
-        opacity: 1;
-    }
-    72% {
-        width: 0;
-        top: -67.2px;
-        opacity: 0;
-    }
-    74% {
-        width: 0;
-        top: -136.4px;
-        opacity: 0;
+    .message {
+        transform: scaleX(0.5);
+        overflow: visible;
+        padding-left: 50px;
+        margin-right: 10px;
+        width: 100vw;
+        /* Use full width */
     }
 
-    /* Word3 - EXPERIENCE */
-    76%, 92% {
-        width: 348px;
-        top: -136.4px;
-        opacity: 1;
+    .word1, .word2, .word3 {
+        transform: scaleX(1);
     }
-    94%, 97%, 100% {
-        width: 0;
-        top: -136.4px;
-        opacity: 0;
+
+    .slickSpan {
+        margin-left: -28px;
+        /* border: 1px solid red; */
+        transform: scaleX(0.7);
+        
     }
-}
+
+    .slickH1 {
+        /* transform: translateX(-50px) scale(1.2);  */
+        /* border: 1px solid green; */
+        width: 200vw;
+    }
+
+
+
+    }
+  
+
+
+

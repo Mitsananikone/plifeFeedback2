@@ -154,7 +154,9 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
-  background-size: cover;
+  background-size: cover; /* to cover the viewport */
+  background-repeat: no-repeat; /* to prevent image from repeating */
+  background-position: center center; /* to center the image */
   opacity: 0; /* start with 0 opacity */
   transition: opacity 2s ease-in-out;
 }
@@ -165,4 +167,34 @@ a {
 
 .backgroundChange-image.fadeOut {
   opacity: 0;
+}
+
+@media screen and (min-width: 1440px) {
+  .backgroundChange-image  .backgroundChange{
+    height: 100vh; /* set the height to viewport height */
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .backgroundChange-image  .backgroundChange{
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .backgroundChange-image  .backgroundChange{
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .backgroundChange-image  .backgroundChange{
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .backgroundChange-image  .backgroundChange{
+    height: 100vh;
+  }
 }

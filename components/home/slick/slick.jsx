@@ -1,19 +1,30 @@
-import React from 'react';
-import styles from './slick.module.css';
+/** @format */
+
+import React from "react";
+import styles from "./slick.module.css";
 
 const Slick = () => {
     return (
-        <div className={styles.slickContainer}>
-        <h1 className={styles.slickH1}>
+      <div className={styles.slickContainer}>
+        <div className={styles.slickInside} style={{marginLeft: '-60px', marginRight: '-60px'}}>
+          <h1 className={styles.slickH1}>
             <span className={styles.slickSpan}>UNIQUE</span>
             <div className={styles.message}>
+              <div className={styles.wordContainer}>
                 <div className={styles.word1}>LIFE</div>
+              </div>
+              <div className={styles.wordContainer}>
                 <div className={styles.word2}>PRICE</div>
+              </div>
+              <div className={styles.wordContainer}>
                 <div className={styles.word3}>EXPERIENCE</div>
+              </div>
             </div>
-        </h1>
+          </h1>
         </div>
+      </div>
     );
-}
-
-export default Slick;
+  };
+  
+  export default Slick;
+  
