@@ -4,10 +4,9 @@
 import { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-
 // Components imports
 import Slick from "@/components/home/slick/slick";
-// import AnimInfoCard from "@/components/animInfoCard/animInfoCard";
+import AnimInfoCard from "@/components/animInfoCard/animInfoCard";
 
 // Styles import
 import styles from "./landingPage.module.css";
@@ -82,7 +81,7 @@ const LandingPage = () => {
       <Slideshow />
 
       <FadeInSection>
-        <section className={styles.section}>
+        <section className={styles.section} id={styles.section1}>
           <div
             className={styles.section_image}
             style={{ backgroundImage: "url('/images/home/section1/section1Background.png')" }}
@@ -104,11 +103,11 @@ const LandingPage = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.2 }}
               >
-                {/* <AnimInfoCard
-                  backgroundImage="/images/home/section1/surgery1.png"
+                <AnimInfoCard
+                  backgroundImage="/images/home/section1/surgery1.jpg"
                   title="Package 1"
                   body="Experience seamless medical care with our surgery package, complete with travel arrangements and a stay in luxury accommodation, tailored just for you."
-                /> */}
+                />
               </motion.div>
 
               <motion.div
@@ -117,11 +116,11 @@ const LandingPage = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.4 }}
               >
-                {/* <AnimInfoCard
-                  backgroundImage="/images/home/section1/surgery2.png"
+                <AnimInfoCard
+                  backgroundImage="/images/home/section1/surgery2.jpg"
                   title="Package 2"
                   body="Unlock unparalleled savings with our dual-surgery package; we handle all your travel needs and ensure your recovery in opulent accommodation."
-                /> */}
+                />
               </motion.div>
 
               <motion.div
@@ -130,11 +129,11 @@ const LandingPage = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.6 }}
               >
-                {/* <AnimInfoCard
-                  backgroundImage="/images/home/section1/surgery3.png"
+                <AnimInfoCard
+                  backgroundImage="/images/home/section1/surgery3.jpg"
                   title="Package 3"
                   body="Embrace the pinnacle of value with our triple-surgery offer: extensive medical procedures combined with premium travel and the finest luxury lodgings, all at an unbeatable rate."
-                /> */}
+                />
               </motion.div>
             </div>
           </motion.div>
@@ -142,13 +141,15 @@ const LandingPage = () => {
       </FadeInSection>
 
       <FadeInSection>
-        <section className={styles.section}>
+        <section className={styles.section} id={styles.section2}>
           <div
             className={styles.section_image}
             style={{ backgroundImage: `url('/images/home/section2/section2Background.png')` }}
           ></div>
           <div className={styles.section_text}>
-            <h2>Luxurious, Seamless Journeys</h2>
+          <h2 className={styles.sectionTitle}>
+          Luxurious, Seamless Journeys
+            </h2>
             <p>
               Relinquish the stresses of travel. From your baggage check-in to
               the welcoming embrace of your resort, to every scenic drive in
@@ -160,13 +161,15 @@ const LandingPage = () => {
       </FadeInSection>
 
       <FadeInSection>
-        <section className={styles.section}>
+        <section className={styles.section} id={styles.section3}>
           <div
             className={styles.section_image}
             style={{ backgroundImage: `url('/images/home/section3/section3Background.png')` }}
           ></div>
           <div className={styles.section_text}>
-            <h2>Guidance from World-Renowned Thai Surgeons</h2>
+          <h2 className={styles.sectionTitle}>
+            Guidance from World-Renowned Thai Surgeons
+            </h2>
             <p>
               Embark on your transformational journey with the finest surgical
               maestros of Thailand. Their unmatched expertise ensures
@@ -178,13 +181,15 @@ const LandingPage = () => {
       </FadeInSection>
 
       <FadeInSection>
-        <section className={styles.section}>
+        <section className={styles.section} id={styles.section4}>
           <div
             className={styles.section_image}
             style={{ backgroundImage: `url('/images/home/section4/section4Background.png')` }}
           ></div>
           <div className={styles.section_text}>
-            <h2>Unwavering Post-Surgery Aftercare</h2>
+          <h2 className={styles.sectionTitle}>
+            Unwavering Post-Surgery Aftercare
+            </h2>
             <p>
               Post-operative care is a testament to our commitment. We pledge to
               cradle you with attention, ensuring swift recovery, comfort, and

@@ -76,7 +76,7 @@
   }
 
   .message {
-      background-color: rgba(255, 255, 0, 0.521);
+      /* background-color: rgba(255, 255, 0, 0.521); */
       color: #d8d5d5;
       font-family: 'Roboto', sans-serif;
       display: block;
@@ -254,6 +254,10 @@
       }
       .message {
         right: 250px;
+
+      }
+      .slickContainer .slickInside {
+        height: 200px;
       }
 
       

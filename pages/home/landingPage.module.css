@@ -4,12 +4,12 @@
 
 .section {
     opacity: 0.8;
-    display: flex;
+    display: flex-box;
     align-items: center;
     justify-content: space-between;
     padding: 2em;
-    height: 90vh;
-    min-height: 90%;
+    height: 100vh;
+    min-height: 100%;
     background-color: rgba(255, 255, 255, 0.5);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     position: relative;
@@ -26,37 +26,39 @@
 }
 
 .section_text>h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 2.3em;
+    margin-bottom: 100px;
     z-index: 9;
     font-weight: bold;
 }
 
 .section_text p {
-    font-size: 1.2em;
-    line-height: 1.5em;
+    color: white;
+    font-size: 1.5em;
+    line-height: 2em;
     z-index: 9;
-
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+    /* black drop shadow */
 }
 
 .slickContainerHome {
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     z-index: 9999;
+    margin-top: 20em;
 
 }
+
+
 
 .landingPage .section .section_image {
     flex: 1;
     min-width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     /* border-radius: 8px; */
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    height: 40%;
+    /* height: 40%; */
     min-height: 100vh;
     position: absolute;
     /* Make the image cover the section */
@@ -66,9 +68,12 @@
     bottom: 0;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     z-index: 0;
     /* To ensure image stays below the text */
 }
+
+.section_image {}
 
 /* New CSS styles for the packages */
 
@@ -104,10 +109,10 @@
 
 .sectionTitle {
     font-family: 'Roboto', sans-serif;
-    margin-top: 5rem;
+    margin-top: 100px;
     text-align: center;
 
-    font-size: 42em;
+    font-size: 2em;
     display: block;
     font-weight: 900;
     text-shadow:
@@ -123,33 +128,136 @@
     color: black;
 }
 
+#section2, #section3, #section4 {
+    padding-bottom: 40vh;
+}
+
+
+
+/* RED */
 @media screen and (min-width: 1440px) {
-    .slickContainerHome{
-        border: 2px solid red;
+    .slickContainerHome {
+        margin-top: 20em;
+        border: 1px solid cyan;
     }
+    .landingPage .section .packages {
+        margin-top: 100px;
+    }
+
 }
 
+/* ORANGE */
 @media screen and (max-width: 1439px) {
-    .slickContainerHome{
-        border: 2px solid orange;
+    .slickContainerHome {
+        margin-top: 20em;
+        border: 1px solid cyan;
     }
+    .landingPage .section .packages {
+        margin-top: 100px;
+
+    }
+
+
 }
 
+/* YELLOW */
 @media screen and (max-width: 991px) {
-    .slickContainerHome{
-        border: 2px solid yellow;
-        width: 80vw;
+    .slickContainerHome {
+        margin-top: 20em;
+        border: 1px solid cyan;
     }
+
+    .section {
+        padding-inline: 0;
+    }
+
+    .section_text {
+        padding-inline: 0;
+    }
+
+    .landingPage .section .packages {
+        margin-top: 100px;
+    }
+
+    .landingPage .section .package {
+        width: 40%;
+        padding: 15px 0;
+    }
+
+
 }
 
+/* GREEN */
 @media screen and (max-width: 767px) {
-    .slickContainerHome{
-        border: 2px solid green;
+    .section {
+        padding-inline: 4em;
+    }
+
+    #section1 {
+        padding-top: 100px;
+        height: auto;
+    }
+
+    #section2 {
+        padding-inline: 4em;
+    }
+
+    .landingPage .section .packages {
+        margin-top: 100px;
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+    .landingPage .section .package {
+        width: 85%;
+
+        padding: 15px 0;
     }
 }
 
+/* BLUE */
 @media screen and (max-width: 479px) {
-    .slickContainerHome{
-        border: 2px solid blue;
+    .section {
+        padding-inline: 1em;
+    }
+
+    #section1 {
+        padding-top: 100px;
+        height: auto;
+    }
+
+    #section2 {
+        padding-inline: 1em;
+    }
+
+    .section_text>h2 {
+        font-size: 2em;
+        margin-bottom: 50px;
+        z-index: 9;
+        font-weight: bold;
+    }
+    
+    .section_text p {
+        color: white;
+        font-size: 1.2em;
+        line-height: 2em;
+        z-index: 9;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+        /* black drop shadow */
+    }
+
+
+    .landingPage .section .packages {
+        margin-top: 100px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .landingPage .section .package {
+        width: 85%;
+        padding: 15px 0;
+
     }
 }

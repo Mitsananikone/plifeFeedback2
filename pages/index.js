@@ -5,15 +5,15 @@ import Slick from '@/components/home/slick/slick';
 export default function Home() {
   return (
     <>
-      <LandingPopup/>
-      <div className="full-flex-centered">
-        <LandingPage />
-       
-    <div>
-   
-    </div>
+      <LandingPopup />
+      <div className="screenSize">
+        <div className="full-flex-centered">
+
+          <LandingPage />
+
+        </div>
       </div>
-      
+
     </>
   );
 }
