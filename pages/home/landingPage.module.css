@@ -39,13 +39,21 @@
 
 }
 
+.slickContainerHome {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    z-index: 9999;
+
+}
+
 .landingPage .section .section_image {
     flex: 1;
     min-width: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     height: 40%;
@@ -99,7 +107,7 @@
     margin-top: 5rem;
     text-align: center;
 
-    font-size: 4em;
+    font-size: 42em;
     display: block;
     font-weight: 900;
     text-shadow:
@@ -115,12 +123,33 @@
     color: black;
 }
 
-@media screen and (min-width: 1440px) {}
+@media screen and (min-width: 1440px) {
+    .slickContainerHome{
+        border: 2px solid red;
+    }
+}
 
-@media screen and (max-width: 1439px) {}
+@media screen and (max-width: 1439px) {
+    .slickContainerHome{
+        border: 2px solid orange;
+    }
+}
 
-@media screen and (max-width: 991px) {}
+@media screen and (max-width: 991px) {
+    .slickContainerHome{
+        border: 2px solid yellow;
+        width: 80vw;
+    }
+}
 
-@media screen and (max-width: 767px) {}
+@media screen and (max-width: 767px) {
+    .slickContainerHome{
+        border: 2px solid green;
+    }
+}
 
-@media screen and (max-width: 479px) {}
+@media screen and (max-width: 479px) {
+    .slickContainerHome{
+        border: 2px solid blue;
+    }
+}

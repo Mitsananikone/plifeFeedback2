@@ -7,10 +7,13 @@ export default function Home() {
     <>
       <LandingPopup/>
       <div className="full-flex-centered">
-        {/* <LandingPage /> */}
-        <Slick/>
-    
+        <LandingPage />
+       
+    <div>
+   
+    </div>
       </div>
+      
     </>
   );
 }

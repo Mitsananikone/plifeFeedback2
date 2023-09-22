@@ -68,13 +68,7 @@ const Slideshow = () => {
                         }`}
                     ></div>
                 ))}
-                <div
-                    style={{
-                        marginTop: "25%",
-                        transform: "scale(1.8)",
-                        opacity: "0.8",
-                    }}
-                >
+                <div className={styles.slickContainerHome}>
                     <Slick />
                 </div>
             </div>

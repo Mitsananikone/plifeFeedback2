@@ -1,34 +1,31 @@
-  .slickContainer {
+.slickContainer {
     margin: 0;
-    padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      height: 15vh;
-      width: 100vw;
-      /* border: 1px solid red; */
-     
-      --word-width1: 145px;
-      --word-width2: 190px;
-      --word-width3: 348px;
-      --word-height: 4.2rem;
-  }
+    padding-left:100px;
+    display: flex;
+    height: 162px; /* 15 * 10.8px */
+    width: 900px; /* 60 * 19.2px */
+    align-items: center;
+    justify-content: center;
+    --word-width1: 145px;
+    --word-width2: 190px;
+    --word-width3: 348px;
+    --word-height: 4.2rem;
+   
+}
 
   .slickInside {
-    
-      /* border: 1px solid red; */
-      width: 100vw;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-  }
+    width: 1536px; /* 80 * 19.2px */
+    height: 162px; /* 15 * 10.8px */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
   .slickH1 {
-    width: 100vw;
+    width: 100%;
       margin-right: auto;
-      color: #4d4d4d;
+      color: #d8d5d5;
       font-family: 'Roboto', sans-serif;
       font-size: 3rem;
       font-weight: 900;
@@ -53,14 +50,11 @@
   }
 
   .slickSpan {
-      /* color: red; */
-      /* border: 1px solid pink; */
-      
-      position: relative;
+    margin-left: 100px;
   }
 
   .slickH1 .slickSpan {
-      font-size: 3rem;
+
       text-shadow:
           1px 1px 2px rgba(255, 255, 255, 0.5),
           /* Highlight */
@@ -78,28 +72,25 @@
   }
 
   .slickH1 .slickSpan, .message {
-    
       display: inline-block;
   }
 
   .message {
-      /* background-color: rgba(255, 255, 0, 0.521); */
-      color: #4d4d4d;
+      background-color: rgba(255, 255, 0, 0.521);
+      color: #d8d5d5;
       font-family: 'Roboto', sans-serif;
       display: block;
       font-weight: 900;
       overflow: hidden;
       position: absolute;
-      right: -100%;  /* Start off the screen */
+      right: 120%;  /* Start off the screen */
       top: 0;
       animation: slideIn 15s ease-in-out infinite;
-      width: min-content;
-      /* padding-left: 0rem; */
-      /* top: 0.2rem; */
-      right: 0;
-      /* left: fit-content; */
+
+      right: 180px;
+
       animation: openclose 15s ease-in-out infinite;
-      /* border: 1px solid orange; */
+
       text-shadow:
           1px 1px 2px rgba(255, 255, 255, 0.5),
           /* Highlight */
@@ -116,7 +107,7 @@
 
   .word1, .word2, .word3 {
   
-      margin-top: -0.165rem;
+      margin-top: -0.16rem;
       padding-left: 2rem;
      /* width:fit-content; */
       font-family: 'Roboto', sans-serif;
@@ -138,7 +129,7 @@
 
       5%, 30% {
         width: var(--word-width1);
-          
+        padding-left: 0;
           top: 4px;
           /* 0.1rem * 16 = 1.6px */
           opacity: 1;
@@ -162,6 +153,7 @@
       /* Word2 - PRICE */
       42%, 67% {
           width: 190px;
+          padding-left: 0;
           width: var(--word-width2);
           top: -67.2px;
           opacity: 1;
@@ -184,6 +176,7 @@
       /* Word3 - EXPERIENCE */
       76%, 92% {
           width: 348px;
+          padding-left: 0;
           width: var(--word-width3);
           top: -135px;
           opacity: 1;
@@ -192,6 +185,7 @@
       94%, 97%, 100% {
           width: 0;
           /* width: fit-content; */
+          /* margin-right: -50px; */
           top: -135px;
           opacity: 0;
       }
@@ -199,7 +193,7 @@
 
   @media screen and (min-width: 1440px) {
       .slickH1 {
-        transform: scale(1);
+        transform: scale(1.3);
     }
   }
 
@@ -211,49 +205,69 @@
 
   @media screen and (max-width: 991px) {
       .slickH1 {
-          scale: 0.8;
+        margin-left: 100px;
+        transform: scale(1.2);
       }
   }
 
   @media screen and (max-width: 767px) {
-      .slickContainer {
-          /* background-color: red; */
-          width: 100%;
+    .slickH1 {
+        width: 100%;
+        margin-left: 100px;
+        transform: scale(0.8);
       }
-
+      .slickSpan {
+        margin-left: 0;
+        width: 120%;
+      }
       .message {
-          width: 100%;
-          /* Use full width */
+        right: 150px;
       }
-
-      .slickH1 {
-
-          width: 100%;
-      }
+    
   }
 
   @media screen and (max-width: 548px) {
-      .slickContainer {
-          /* background-color: blue; */
-          width: 100%;
+    .slickH1 {
+        width: 100%;
+        margin-left: 100px;
+        transform: scale(0.6);
       }
-
+      .slickSpan {
+        margin-left: 0;
+        width: 120%;
+      }
       .message {
-        
-          width: 100%;
-          /* Use full width */
-      }
-
-      .slickH1 {
-          scale: 0.6;
-          width: 100%;
+        right: 150px;
       }
   }
 
 
   @media screen and (max-width: 479px) {
+    .slickH1 {
+        width: 100%;
+        margin-left: 150px;
+        transform: scale(0.6);
+      }
+      .slickSpan {
+        margin-left: 0;
+        width: 120%;
+      }
+      .message {
+        right: 250px;
+      }
+
+      
+
+
+
+    }
+  
+
+
+
+/* 
     .slickContainer {
-        /* background-color: red; */
+
         width: 100%;
     }
 
@@ -263,7 +277,7 @@
         padding-left: 50px;
         margin-right: 10px;
         width: 100vw;
-        /* Use full width */
+
     }
 
     .word1, .word2, .word3 {
@@ -272,21 +286,13 @@
 
     .slickSpan {
         margin-left: -28px;
-        /* border: 1px solid red; */
+
         transform: scaleX(0.7);
         
     }
 
     .slickH1 {
-        /* transform: translateX(-50px) scale(1.2);  */
-        /* border: 1px solid green; */
-        width: 200vw;
+        margin-left: 40px;
+        width: 200vw; 
     }
-
-
-
-    }
-  
-
-
-
+    */

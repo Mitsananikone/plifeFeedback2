@@ -6,7 +6,7 @@ import styles from "./slick.module.css";
 const Slick = () => {
     return (
       <div className={styles.slickContainer}>
-        <div className={styles.slickInside} style={{marginLeft: '-60px', marginRight: '-60px'}}>
+        <div className={styles.slickInside}>
           <h1 className={styles.slickH1}>
             <span className={styles.slickSpan}>UNIQUE</span>
             <div className={styles.message}>
