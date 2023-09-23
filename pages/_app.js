@@ -24,21 +24,20 @@ export default function App({ Component, pageProps }) {
   }, []);
 
   return (
-    <>
+    <div className="appWrapper">
       <Head>
         <title>Phoenique Life</title>
-
       </Head>
       <Navbar />
       <TransitionGroup>
         <CSSTransition key={router.route} classNames="page" timeout={800}>
-          <div>
+          <div className="contentWrapper">
             <Component {...pageProps} />
           </div>
-          
         </CSSTransition>
       </TransitionGroup>
       <Footer />
-    </>
+    </div>
   );
+  
 }
