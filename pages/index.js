@@ -1,6 +1,6 @@
 import LandingPage from '@/pages/home/landingpage'
 import LandingPopup from '@/components/home/landingPopup/landingPopup';
-import Slick from '@/components/home/slick/slick';
+
 
 export default function Home() {
   return (

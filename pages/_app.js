@@ -8,6 +8,7 @@ import Navbar from '@/components/nav/nav';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 // import '@/components/logo/logo.module.css';
 import markerSDK from '@marker.io/browser';
+import Footer from '@/components/footer/footer';
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
@@ -37,7 +38,7 @@ export default function App({ Component, pageProps }) {
           
         </CSSTransition>
       </TransitionGroup>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
