@@ -18,13 +18,17 @@
     z-index: 999999;
 }
 
+.footerContent > span {
+    margin-top: 2px;
+    font-size: x-small;
+}
 
 @media screen and (max-width: 479px) {
     .footerContainer {
     height: 3vh;
     }
-    .footerContent > h6 {
+    /* .footerContent > h6 {
         margin-top: 5px;
         font-size: x-small;
-    }
+    } */
 }

@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div className={styles.footerContainer}>
       <div className={styles.footerContent}>
-        <h6>© 2023 PHOENIQUELIFE.  All rights reserved.</h6>
+        <span>© 2023 PHOENIQUELIFE.  All rights reserved.</span>
       </div>
     </div>
   );
