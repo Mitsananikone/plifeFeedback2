@@ -138,7 +138,7 @@
 @media screen and (min-width: 1440px) {
     .slickContainerHome {
         margin-top: 20em;
-        border: 1px solid cyan;
+        /* border: 1px solid cyan; */
     }
     .landingPage .section .packages {
         margin-top: 100px;
@@ -150,11 +150,11 @@
 @media screen and (max-width: 1439px) {
     .slickContainerHome {
         margin-top: 20em;
-        border: 1px solid cyan;
+        /* border: 1px solid cyan; */
     }
     .landingPage .section .packages {
         margin-top: 100px;
-
+        
     }
 
 
@@ -164,11 +164,16 @@
 @media screen and (max-width: 991px) {
     .slickContainerHome {
         margin-top: 20em;
-        border: 1px solid cyan;
+        /* border: 1px solid cyan; */
     }
 
     .section {
-        padding-inline: 0;
+        padding-inline: 4em;
+    }
+
+    #section1 {
+        padding-top: 100px;
+        height: auto;
     }
 
     .section_text {
@@ -177,10 +182,13 @@
 
     .landingPage .section .packages {
         margin-top: 100px;
+        flex-direction: column;
+        align-items: center;
+
     }
 
     .landingPage .section .package {
-        width: 40%;
+        width: 85%;
         padding: 15px 0;
     }
 
@@ -205,14 +213,12 @@
     .landingPage .section .packages {
         margin-top: 100px;
         flex-direction: column;
-
         align-items: center;
 
     }
 
     .landingPage .section .package {
         width: 85%;
-
         padding: 15px 0;
     }
 }
@@ -241,7 +247,7 @@
     
     .section_text p {
         color: white;
-        font-size: 1.2em;
+        font-size: 1em;
         line-height: 2em;
         z-index: 9;
         text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
@@ -256,8 +262,8 @@
     }
 
     .landingPage .section .package {
-        width: 85%;
-        padding: 15px 0;
+        width: 100%;
+        padding:  0;
 
     }
 }

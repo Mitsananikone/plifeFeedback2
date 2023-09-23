@@ -25,7 +25,8 @@
   .slickH1 {
     width: 100%;
       margin-right: auto;
-      color: #d8d5d5;
+      /* color: #d8d5d5; */
+      color: white;
       font-family: 'Roboto', sans-serif;
       font-size: 3rem;
       font-weight: 900;
@@ -77,7 +78,8 @@
 
   .message {
       /* background-color: rgba(255, 255, 0, 0.521); */
-      color: #d8d5d5;
+      /* color: #d8d5d5; */
+      color: white;
       font-family: 'Roboto', sans-serif;
       display: block;
       font-weight: 900;

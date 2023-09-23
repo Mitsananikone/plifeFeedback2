@@ -15,7 +15,7 @@ const AnimInfoCard = ({ backgroundImage, title, body }) => (
         style={{
           backgroundImage: `url(${backgroundImage})`,
           width: "100%",
-          minHeight: "300px", // You can adjust this value as needed
+          minHeight: "200px", // You can adjust this value as needed
           backgroundSize: "100% auto",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
