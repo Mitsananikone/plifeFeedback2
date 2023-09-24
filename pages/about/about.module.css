@@ -50,7 +50,8 @@
     border-radius: 0.25rem;
     height: 4rem;
     font-weight: 700;
-    color: #000000;
+    color: #666666;
+    border: 1px solid #777777;
     vertical-align: middle;
     white-space: nowrap;
     background-color: #ffffff;

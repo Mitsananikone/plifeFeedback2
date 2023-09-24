@@ -1,6 +1,6 @@
 /** @format */
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import styles from "./nav.module.css";
 import ContactFire from "@/components/nav/contactFire/contactFire";
@@ -9,15 +9,39 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+      setIsMenuOpen(window.innerWidth < 767);
+  }, []);
+
+  const [isClient, setIsClient] = useState(false);
+
+useEffect(() => {
+    setIsClient(true);
+}, []);
+
+  const [windowWidth, setWindowWidth] = useState(null);
+
+  useEffect(() => {
+      const handleResize = () => setWindowWidth(window.innerWidth);
+      window.addEventListener('resize', handleResize);
+      handleResize(); // initial call
+      return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  
+useEffect(() => {
+    document.documentElement.style.setProperty('--window-width', `${windowWidth}px`);
+}, [windowWidth]);
+
   const navItemHamburgerRef = useRef(null);
   const menuItems = [
     { name: "ABOUT", link: "/about/aboutPage" },
-    { name: "PROCEDURES", link: "/procedures/surgeryMovingHighlight" },
+    { name: "PROCEDURES", link: "/procedures/prodecuresPage" },
     { name: "FAQ", link: "/faq/faqPage" },
     { name: "RESOURCES", link: "/resource/resourcePage" },
     { name: "QUOTE", link: "/quote/quotePage" },
     { name: "PRICING", link: "/pricing/pricingPage" },
-    { name: "PROMO", link: "/promo/promoPage" },
+    // { name: "PROMO", link: "/promo/promoPage" },
     { name: "CONTACTS", link: "/contacts/contactsPage" },
   ];
 
@@ -77,12 +101,12 @@ const Navbar = () => {
 
         {/* Hamburger Icon */}
         <button className={styles.hamburgerButton} onClick={toggleMenu}>
-    <HamburgerIcon toggleMenu={toggleMenu} />
+        <HamburgerIcon toggleMenu={toggleMenu} isOpen={isMenuOpen} />
 </button>
       </div>
 
       {/* Mobile Menu Items (Inside Modal) */}
-      {isMenuOpen && (
+      {isClient && isMenuOpen && (
         <div
           ref={navItemHamburgerRef}
           className={`${styles.navItemHamburger} ${
@@ -90,7 +114,8 @@ const Navbar = () => {
           }`}
         >
           {menuItems.map((item, index) => (
-            <Link href={item.link} key={index} passHref>
+
+            <Link href={item.link} key={index} passHref className={styles.navItem}>
               <div
                 className={styles.title}
                 style={{ "--index": index, "--total-items": menuItems.length }}
@@ -98,6 +123,7 @@ const Navbar = () => {
                 {item.name === "CONTACTS" ? <ContactFire /> : item.name}
               </div>
             </Link>
+    
           ))}
         </div>
       )}

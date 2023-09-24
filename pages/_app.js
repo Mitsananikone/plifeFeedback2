@@ -13,15 +13,15 @@ import Footer from '@/components/footer/footer';
 export default function App({ Component, pageProps }) {
   const router = useRouter();
 
-  useEffect(() => {
-    async function initializeMarker() {
-      const widget = await markerSDK.loadWidget({
-        project: '64f9013cd15407380f6eeef2',
-      });
-    }
+  // useEffect(() => {
+  //   async function initializeMarker() {
+  //     const widget = await markerSDK.loadWidget({
+  //       project: '64f9013cd15407380f6eeef2',
+  //     });
+  //   }
 
-    initializeMarker();
-  }, []);
+  //   initializeMarker();
+  // }, []);
 
   return (
     <div className="appWrapper">
