@@ -36,7 +36,7 @@ useEffect(() => {
   const navItemHamburgerRef = useRef(null);
   const menuItems = [
     { name: "ABOUT", link: "/about/aboutPage" },
-    { name: "PROCEDURES", link: "/procedures/prodecuresPage" },
+    { name: "PROCEDURES", link: "/procedures/proceduresPage" },
     { name: "FAQ", link: "/faq/faqPage" },
     { name: "RESOURCES", link: "/resource/resourcePage" },
     { name: "QUOTE", link: "/quote/quotePage" },

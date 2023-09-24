@@ -2,7 +2,7 @@
 
 import React, { useRef, useEffect, useState } from "react";
 import Link from "next/link"; // Import the Link component
-import styles from "./surgeryMovingHighlight.module.css";
+import styles from "./proceduresPage.module.css";
 import { motion } from "framer-motion";
 
 export default function ProceduresCard() {
@@ -16,77 +16,70 @@ export default function ProceduresCard() {
   
 
 
-  const fitTitle = () => {
-    const container = containerRef.current;
-    const titleElement = titleRef.current;
+//   const fitTitle = () => {
+//     const container = containerRef.current;
+//     const titleElement = titleRef.current;
 
-    if (!container || !titleElement) return;
+//     if (!container || !titleElement) return;
 
-    titleElement.style.fontSize = "rem"; // Starting font size
-    titleElement.style.letterSpacing = "normal"; // Reset letter spacing
+//     const maxIterations = 100;
+//     let iterations = 0;
 
-    const containerWidth = container.offsetWidth;
-    const textWidth = titleElement.offsetWidth;
+//     titleElement.style.fontSize = "5rem"; 
 
-    if (textWidth >= containerWidth) {
-      const scalingFactor = containerWidth / textWidth;
-      const newFontSize =
-        parseFloat(window.getComputedStyle(titleElement).fontSize) *
-        scalingFactor;
-      const newLetterSpacing =
-        (containerWidth - textWidth * scalingFactor) /
-        (titleElement.textContent.length - 1);
+//     while(titleElement.offsetWidth > container.offsetWidth && iterations < maxIterations) {
+//         const currentFontSize = parseFloat(window.getComputedStyle(titleElement).fontSize);
+//         titleElement.style.fontSize = `${currentFontSize - 0.5}rem`; // Decrease by 0.1rem
+//         iterations++;
+//     }
+// };
 
-      titleElement.style.fontSize = `${newFontSize}px`;
-      titleElement.style.letterSpacing = `${newLetterSpacing}px`;
-    }
-  };
+//   useEffect(() => {
+//     fitTitle();
+//     window.addEventListener("resize", fitTitle);
+
+//     return () => window.removeEventListener("resize", fitTitle);
+// }, []);
 
   const [highlightRow, setHighlightRow] = useState(0);
 
   useEffect(() => {
     const highlightInterval = setInterval(() => {
-      setHighlightRow((prevRow) => (prevRow + 1) % 4); // there are 8 lines, not 4 pairs now
-    }, 4000); // adjust this duration to your liking
+      setHighlightRow((prevRow) => (prevRow + 1) % 4); 
+    }, 3000); 
   
     return () => clearInterval(highlightInterval);
   }, []);
   
 
-  useEffect(() => {
-    fitTitle();
-    window.addEventListener("resize", fitTitle);
 
-    return () => window.removeEventListener("resize", fitTitle);
-  }, []);
 
   return (
     <div
       className="background"
       style={{
-        backgroundImage: "url('/images/procedures-legs.png')",
+        backgroundImage: "url('/images/procedures/procedures.jpg')",
+        height: "100vh"
       }}
     >
       <div className={styles.procedureComponent}>
-        <div ref={containerRef} className={styles.proceduresHighlight}>
-          {" "}
-          {/* 60% width */}
-          <p className={styles.headerText}>
-            You don&#39;t pay for your beauty surgery - You pay for your unique
-            experience
-          
-          <div className={styles.mainTitle}>
-            <h1 ref={titleRef} >
-              OUR PROCEDURES
-            </h1>
-          </div>
-          </p>
+      <div ref={containerRef} className={styles.proceduresHighlight}> {/* 60% width */}
+    <p className={styles.headerText}>
+        You don't pay for your beauty surgery - You pay for your unique experience
+    </p>
+    <div className={styles.mainTitle}>
+        <h1 ref={titleRef}>
+            OUR PROCEDURES
+        </h1>
+    </div>
+
+      
           <motion.div variants={containerRef} initial="hidden" animate="show" className={styles.highlightText}>
             <motion.p
               variants={fadeIn}
               initial="hidden"
               animate={highlightRow === 0 ? "visible" : "hidden"}
-              className="text-left"
+              className={styles.text_left}
             >
               BEAUTY
             </motion.p>
@@ -94,7 +87,7 @@ export default function ProceduresCard() {
               variants={fadeIn}
               initial="hidden"
               animate={highlightRow === 0 ? "visible" : "hidden"}
-              className="text-right"
+              className={styles.text_right}
             >
               SURGERY
             </motion.p>
@@ -102,7 +95,7 @@ export default function ProceduresCard() {
               variants={fadeIn}
               initial="hidden"
               animate={highlightRow === 1 ? "visible" : "hidden"}
-              className="text-left"
+              className={styles.text_left}
             >
               GENDER
             </motion.p>
@@ -110,7 +103,7 @@ export default function ProceduresCard() {
               variants={fadeIn}
               initial="hidden"
               animate={highlightRow === 1 ? "visible" : "hidden"}
-              className="text-right"
+              className={styles.text_right}
             >
               TRANSITIONING
             </motion.p>
@@ -118,7 +111,7 @@ export default function ProceduresCard() {
               variants={fadeIn}
               initial="hidden"
               animate={highlightRow === 2 ? "visible" : "hidden"}
-              className="text-left"
+              className={styles.text_left}
             >
               AESTHETIC
             </motion.p>
@@ -126,7 +119,7 @@ export default function ProceduresCard() {
               variants={fadeIn}
               initial="hidden"
               animate={highlightRow === 2 ? "visible" : "hidden"}
-              className="text-right"
+              className={styles.text_right}
             >
               NON-SURGICAL
             </motion.p>
@@ -134,7 +127,7 @@ export default function ProceduresCard() {
               variants={fadeIn}
               initial="hidden"
               animate={highlightRow === 3 ? "visible" : "hidden"}
-              className="text-left"
+              className={styles.text_left}
             >
               DENTAL
             </motion.p>
@@ -142,7 +135,7 @@ export default function ProceduresCard() {
               variants={fadeIn}
               initial="hidden"
               animate={highlightRow === 3 ? "visible" : "hidden"}
-              className="text-right"
+              className={styles.text_right}
             >
               PROCEDURES
             </motion.p>
