@@ -165,11 +165,14 @@
         display: none;
     }
 
+
+
     .navItem span {
         display: inline-flex;
         margin-left: 3%;
         padding: 0.1em;
         font-size: x-large;
+
     }
 }
 
@@ -198,6 +201,18 @@
     }
 }
 
+@media screen and (min-width: 768px) {
+    .navItem {
+        color: white;
+        background: linear-gradient(to bottom, white, white,gold, white, white, white);
+    /* Make sure the text is displayed on top of the gradient */
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    }
+}
+
+
 @media screen and (max-width: 767px) {
 
     .navContainer>div {
@@ -205,6 +220,7 @@
         /* background-color: red; */
     }
 
+  
     .navItemHamburger {
         padding-top: 20px;
         display: flex;
