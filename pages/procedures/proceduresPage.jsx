@@ -141,7 +141,7 @@ export default function ProceduresCard() {
             </motion.p>
             </motion.div>
             <div className={styles.detailsButtonContainer}>
-            <Link href="/procedures/menu/procedureTypes" passHref>
+            <Link href="/resources/resourcePage" passHref>
               <button className={styles.detailsButton}>View Details</button>
             </Link>
           </div>

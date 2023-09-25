@@ -38,7 +38,7 @@ useEffect(() => {
     { name: "ABOUT", link: "/about/aboutPage" },
     { name: "PROCEDURES", link: "/procedures/proceduresPage" },
     { name: "FAQ", link: "/faq/faqPage" },
-    { name: "RESOURCES", link: "/resource/resourcePage" },
+    { name: "RESOURCES", link: "/resources/resourcePage" },
     { name: "QUOTE", link: "/quote/quotePage" },
     { name: "PRICING", link: "/pricing/pricingPage" },
     // { name: "PROMO", link: "/promo/promoPage" },

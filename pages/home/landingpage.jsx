@@ -6,7 +6,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 // Components imports
 import Slick from "@/components/home/slick/slick";
-import AnimInfoCard from "@/components/animInfoCard/animInfoCard";
+import AnimInfoCard from "@/components/home/animInfoCard/animInfoCard";
 
 // Styles import
 import styles from "./landingPage.module.css";

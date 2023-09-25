@@ -1,0 +1,152 @@
+.popupContainerFull {
+    position: fixed;
+    /* Making it fixed to cover the whole viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* No background-color to keep it transparent */
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999999;
+    transition: opacity 1s ease, visibility 1s ease;
+    /* this ensures smooth transition */
+    opacity: 1;
+    visibility: visible;
+    /* Setting a high z-index to ensure it's above other content */
+}
+
+
+.popupContainer {
+    position: relative;
+    width: 90%;
+    /* background-color: white; */
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    height: fit-content;
+    max-height: 1000vh;
+}
+
+.popupInner {
+    padding: 0.5em;
+    padding-inline: 0;
+}
+
+.spanWrap {
+    width: 50vw;
+    word-wrap: break-word;
+}
+
+.closePopup {
+    position: absolute;
+    /* Changed from relative to absolute */
+    top: 40px;
+    /* Set the distance from the top edge */
+    right: 0;
+    /* Set the distance from the right edge */
+    background: none;
+    border: none;
+    font-size: 20px;
+    z-index: 99999;
+}
+
+.closePopup:hover {
+    color: #ff5722;
+}
+
+.popup_navMenu {
+    margin-top: 4em;
+    /* border: 1px solid orange; */
+    width: 35%;
+    z-index: 1;
+}
+
+.popup_info {
+    /* border: 1px solid orange; */
+    position: relative;
+    /* Allows for the positioning of child pseudo-elements */
+    margin-top: 5em;
+    padding-top: 6em;
+    /* increased padding to account for gradient height */
+    padding-bottom: 3em;
+    /* same as above */
+    width: 70%;
+    overflow-Y: auto;
+    z-index: 999999;
+    /* border: 1px solid yellow; */
+    height: fit-content;
+    max-height: 85vh;
+}
+
+.popupContainerHidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.fade-enter {
+    opacity: 0.5;
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit-active {
+    opacity: 0.5;
+    transition: opacity 1s;
+}
+
+
+  
+  @media screen and (max-width: 991px) {
+    .popupContainer {
+        display: flex;
+        background-color: white
+    }
+    .popup_navMenu {
+        display: none; /* Hide the nav menu */
+      }
+      .popup_info {
+        width: 100%; /* Let the info component take up the full width */
+        margin-top: 0; /* Adjust top margin as needed */
+        height: 100%;
+      }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .popupContainer > span {
+        font-size: 0.2rem;
+    }
+  }
+  
+  @media screen and (max-width: 479px) {
+
+      .popup_info {
+        width: 100%; /* Let the info component take up the full width */
+        margin-top: 0; /* Adjust top margin as needed */
+        height: 100%;
+        word-wrap: break-word;
+      }
+      .motion {
+        width: 70vw;
+    }
+
+      .popup_info h2{
+        font-size: 1rem;
+      }
+
+      .popup_info span{
+        font-size: 0.8rem;
+      }
+  }
+  

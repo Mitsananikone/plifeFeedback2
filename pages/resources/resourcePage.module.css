@@ -1,0 +1,241 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    height:fit-content;;
+}
+
+.procedureContainer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    background-color: #E5E7EB;
+    background: linear-gradient(to top, #929292, #E5E7EB);
+    height: 100%;
+    padding: 1rem 1rem 0 1rem;
+    overflow: visible;
+    flex-grow: 1;
+    min-height: 200vh;
+}
+
+.procedureContainer>h1 {
+    margin: 1.25rem 0;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #6B7280;
+    scale: 1.7;
+}
+
+.tCardGroup1, .tCardGroup2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+.bothGroups {
+    display: block;
+    padding: 2em;
+    /* Padding for the whole groups */
+}
+
+
+@media screen and (min-width: 1440px) {
+    .procedureContainer {
+        flex-direction: column;
+        padding: 2em;
+  
+            min-height: min-content;
+            width: 100vw;
+
+    }
+
+    .procedureContainer>h1 {}
+
+    .tCardGroup1, .tCardGroup2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        /* Taking full width of the container */
+        height: min-content;
+        /* margin-top: 4em; */
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .tCardGroup1>.tCard, .tCardGroup2>.tCard {
+        flex-basis: 15%;
+        box-sizing: border-box;
+        /* To include padding and borders in the width */
+        /* You might need additional adjustments here based on padding, margins, etc. of cards */
+    }
+}
+
+@media screen and (max-width: 1439px) {
+    .procedureContainer {
+        flex-direction: column;
+        padding: 2em;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .procedureContainer>h1 {
+        /* color: orange; */
+    }
+
+    .tCardGroup1, .tCardGroup2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        /* Taking full width of the container */
+        /* margin-top: 4em; */
+        align-items: center;
+        padding: 2em;
+    }
+
+    .tCardGroup1>.tCard, .tCardGroup2>.tCard {
+        flex-basis: 33%;
+        box-sizing: border-box;
+        /* To include padding and borders in the width */
+        /* You might need additional adjustments here based on padding, margins, etc. of cards */
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .procedureContainer {
+        flex-direction: column;
+        padding: 2em;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .procedureContainer>h1 {
+        /* color: yellow; Using yellow as the final color. If you prefer green, change it. */
+    }
+
+    .tCardGroup1, .tCardGroup2 {
+        margin-top: 4em;
+        flex-basis: 33%;
+        flex-direction: row;
+        align-items: center;
+        padding: 2em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .procedureContainer {
+        min-height: min-content;
+        width: 100vw;
+    }
+
+    .procedureContainer .title {
+        margin-top: 50px;
+        font-size: small;
+
+
+    }
+
+    .bothGroups {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .procedureContainer>h1 {
+        font-size: 1em;
+    }
+
+    .tCardGroup1, .tCardGroup2 {
+        padding-top: 200px;
+        border: 1px solid green;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .procedureContainer .mainContainer{
+        height: 100%;
+        width: 100vw;
+    }
+
+    .procedureContainer .title {
+        margin-top: 50px;
+        font-size: small;
+
+
+    }
+
+    .bothGroups {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .procedureContainer>h1 {
+        font-size: 1em;
+    }
+
+    .tCardGroup1, .tCardGroup2 {
+        padding-top: 200px;
+
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .procedureContainer {
+        min-height: 100vh;
+        width: 100vw;
+    }
+
+    .procedureContainer .title {
+        margin-top: 50px;
+        font-size: x-small;
+
+
+    }
+
+    .bothGroups {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .procedureContainer>h1 {
+        font-size: 1em;
+    }
+
+    .tCardGroup1, .tCardGroup2 {
+        padding-top: 200px;
+        border: 1px solid green;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+}

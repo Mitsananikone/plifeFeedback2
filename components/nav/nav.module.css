@@ -204,7 +204,7 @@
 @media screen and (min-width: 768px) {
     .navItem {
         color: white;
-        background: linear-gradient(to bottom, white, white,gold, white, white, white);
+        background: linear-gradient(to bottom,  white,gold, white);
     /* Make sure the text is displayed on top of the gradient */
     color: transparent;
     -webkit-background-clip: text;
