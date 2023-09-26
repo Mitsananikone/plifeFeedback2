@@ -156,7 +156,7 @@
 
 
 .cardContent > *:not(.cardTitle) {
-  opacity: 1 !important; 
+  opacity: 1 ; 
   margin-top: 0px;
   /* transition: opacity 500ms linear; */
 }
@@ -168,7 +168,7 @@
   }
 
   .cardContent > *:not(.cardTitle) {
-    opacity: 1 !important; 
+    opacity: 1 ; 
     transition: opacity 500ms linear;
   }
 

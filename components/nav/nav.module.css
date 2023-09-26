@@ -2,7 +2,7 @@
     position: relative;
     top: 0;
     padding: 1rem;
-    z-index: 9;
+    z-index: 100;
     /* overflow: hidden; */
     background: linear-gradient(-190deg, #000, #6b5b00);
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
@@ -229,7 +229,7 @@
         justify-content: flex-end;
         width: 100%;
         transition: transform 0.5s ease-out;
-        background-color: transparent !important;
+        background-color: transparent;
         height: min-content;
     }
 

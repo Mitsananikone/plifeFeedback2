@@ -9,6 +9,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 // import '@/components/logo/logo.module.css';
 import markerSDK from '@marker.io/browser';
 import Footer from '@/components/footer/footer';
+import Modal from "react-modal";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
@@ -23,6 +24,11 @@ export default function App({ Component, pageProps }) {
   //   initializeMarker();
   // }, []);
 
+  useEffect(() => {
+    // Setup react-modal for accessibility
+    Modal.setAppElement('#__next');
+  }, []);
+  
   return (
     <div className="appWrapper">
       <Head>

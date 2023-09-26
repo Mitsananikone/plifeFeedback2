@@ -31,7 +31,7 @@ export default function CosmeticSurgeryCard({ onClose, onProcedureSelect, select
             <h1 className={`${styles.navItem} ${selectedProcedure === "tummyTuck" ? styles.selected : ""}`} 
         onClick={() => onProcedureSelect("tummyTuck")}>TUMMY TUCK</h1>
           </div>
-          <Link href="/resources/resourcesPage" passHref>
+          <Link href="/contacts/contactsPage" passHref>
             <button className={styles.seeMoreButton}>See More</button>
           </Link>
         </div>

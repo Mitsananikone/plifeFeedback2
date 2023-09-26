@@ -123,8 +123,7 @@
     }
     .iCard {
         display: none;
-        margin-bottom: 4em;
-        width: 33vw;
+      
     }
 
 }
@@ -132,5 +131,9 @@
 @media screen and (max-width: 320px) {
     .iCardTitle > p {
         font-size: 0.6em;
+    }
+    .iCard {
+        display: none;
+      
     }
 }

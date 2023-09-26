@@ -117,9 +117,9 @@
     .tCardTitle>p {
         font-size: 0.65em;
     }
-
     .tCard {
-        width: calc(50% - 20px);
+        
+        width: 20vw;
         /* assuming a 10px margin on each side of the card */
         margin: 10px;
         /* 10px margin for aesthetic spacing between cards */
@@ -129,19 +129,22 @@
     }
 
     .tCardTitle>p {
-        font-size: 1.8rem;
+        font-size: 1.2rem;
         vertical-align: middle;
     }
 }
 
 @media screen and (max-width: 991px) {
     .tCardTitle>p {
-        font-size: 1.4em;
+        font-size: 1em;
     }
 
-
     .tCard {
-        scale: 1;
+        width: 35vw;
+        /* assuming a 10px margin on each side of the card */
+        margin: 10px;
+        /* 10px margin for aesthetic spacing between cards */
+        box-sizing: border-box;
         margin-bottom: 4em;
     }
 }
@@ -186,6 +189,37 @@
     .imgContainer {
         height: 100%;
         width: 100vw;
+    }
+
+    .tCardTitle {
+        padding-top: 20px;
+    }
+
+    .tCardTitle>p {
+        font-size: 1.2rem;
+        vertical-align: middle;
+    }
+
+    .imgContainer {
+
+        height: 300px;
+        /* Relative height according to width */
+
+
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .tCard {
+        margin-top: 40px;
+        border: 1px solid gray;
+        width: 80%;
+  
+    }
+
+    .imgContainer {
+        height: 100%;
+        width: 80vw;
     }
 
     .tCardTitle {

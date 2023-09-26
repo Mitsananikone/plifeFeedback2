@@ -1,11 +1,11 @@
 /** @format */
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from 'react';
+import Rodal from 'rodal';
+import 'rodal/lib/rodal.css'; // importing default styles
 import styles from "./popupResources.module.css";
 import CosmeticSurgeryCard from "@/components/resources/cosmeticSurgeryInfo/cosmeticSurgeryCard";
 import { BreastImplantInfo } from "@/components/resources/cosmeticSurgeryInfo/breastImplant/breastImplant";
-
-
 import BreastLiftInfo from "@/components/resources/cosmeticSurgeryInfo/breastLift/breastLift";
 import BreastReductionInfo from "@/components/resources/cosmeticSurgeryInfo/breastReduction/breastReduction";
 import FaceliftInfo from "@/components/resources/cosmeticSurgeryInfo/faceLift/faceLift";
@@ -15,13 +15,6 @@ import RhinoplastyInfo from "@/components/resources/cosmeticSurgeryInfo/rhinopla
 import TummyTuckInfo from "@/components/resources/cosmeticSurgeryInfo/tummyTuck/tummyTuck";
 
 function PopupResources({ isPopupVisible, onClose, selectedProcedure }) {
-
-  useEffect(() => {
-    if (surgeriesPopupRef.current) {
-        setContentHeight(surgeriesPopupRef.current.clientHeight);
-    }
-}, [selectedNavProcedure]);
-
   const popupRef = useRef(null);
   const surgeriesPopupRef = useRef(null);
 
@@ -57,39 +50,37 @@ function PopupResources({ isPopupVisible, onClose, selectedProcedure }) {
     onClose();
   };
 
-  const popupHeight = surgeriesPopupRef.current?.clientHeight;
+
+
 
   return (
-    <div
-    className={
-      isPopupVisible ? styles.popupContainerFull : styles.popupContainerHidden
-    }
-  >
-    <div ref={surgeriesPopupRef} className={styles.popupContainer} style={{ height: contentHeight }}>
-      <div className={styles.popup_navMenu}>
-        <div className={styles.popupMenu}>
-        <CosmeticSurgeryCard
-          onProcedureSelect={handleProcedureSelect}
-          selectedProcedure={selectedNavProcedure}
-        />
-        </div>
-      </div>
 
-      <div
-        className={styles.popup_info}
-        // style={{ maxHeight: "90vh", overflowY: "auto" }} // Adjust maxHeight as needed
-      >
+    <Rodal  visible={isPopupVisible} 
+    onClose={onClose} 
+    width={90} 
+    height={90} 
+    measure="%" >
+
+      {/* <div className={styles.popup_navMenu}> */}
+        <div className={styles.popupMenu}>
+          <CosmeticSurgeryCard
+            onProcedureSelect={handleProcedureSelect}
+            selectedProcedure={selectedNavProcedure}
+          />
+        </div>
+      {/* </div> */}
+
+      <div className={styles.infoSection}>
         {ProcedureInfoComponent && (
-          <ProcedureInfoComponent containerHeight={contentHeight} />
+          <ProcedureInfoComponent />
         )}
       </div>
 
-      <button onClick={handleClosePopup} className={styles.closePopup}>
+      {/* <button onClick={handleClosePopup} className={styles.closePopup}>
         x
-      </button>
-    </div>
-  </div>
-);
+      </button> */}
+ </Rodal>
+  );
 }
 
 export default PopupResources;
