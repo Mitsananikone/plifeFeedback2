@@ -76,7 +76,7 @@ export const FaceLiftInfo = React.forwardRef((props) => {
             unmountOnExit={false}
           >
             <div ref={refsArray[0]} className={popupStyles.motion}>
-              <h2 className="font-bold text-xl">Cosmetic Surgery Face Lift</h2>
+            <h2 className={popupStyles.infoTitle}>Cosmetic Surgery Face Lift</h2>
 
               <span className="text-m flex-wrap">
                 <br />A facelift, technically known as rhytidectomy, is a
@@ -115,7 +115,7 @@ export const FaceLiftInfo = React.forwardRef((props) => {
             unmountOnExit={false}
           >
             <div ref={refsArray[1]} className={popupStyles.motion}>
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
                 The Appeal of Face Lifts
               </h2>
 
@@ -127,7 +127,7 @@ export const FaceLiftInfo = React.forwardRef((props) => {
               </span>
               <br />
 
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
                 Best Candidates for a Face Lift
               </h2>
 
@@ -139,7 +139,7 @@ export const FaceLiftInfo = React.forwardRef((props) => {
               </span>
               <br />
 
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
                 The Surgical Procedure
               </h2>
 
@@ -175,7 +175,7 @@ export const FaceLiftInfo = React.forwardRef((props) => {
             unmountOnExit={false}
           >
             <div ref={refsArray[2]} className={popupStyles.motion}>
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
                 {" "}
                 Recovery and Results{" "}
               </h2>
@@ -184,7 +184,7 @@ export const FaceLiftInfo = React.forwardRef((props) => {
               Recovery from a facelift involves some swelling, bruising, and discomfort, but these subside over time. Results are long-lasting, offering a refreshed and youthful appearance. While it doesn&apos;t stop aging, it can turn back the clock significantly.
               </span>
 
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
               Benefits of a Face Lift
               </h2>
               <span>
@@ -192,7 +192,7 @@ export const FaceLiftInfo = React.forwardRef((props) => {
               </span>
               <br />
 
-              <h2 className="font-bold text-xl mt-12">Potential Risks</h2>
+              <h2 className={popupStyles.infoTitle}>Potential Risks</h2>
 
               <span className="text-m flex-wrap">
               Every surgical procedure has risks. For facelifts, these include infection, poor scarring, hematoma, nerve injury, and complications related to anesthesia. It&apos;s crucial to discuss these risks with your surgeon during the consultation.
@@ -207,7 +207,7 @@ export const FaceLiftInfo = React.forwardRef((props) => {
             unmountOnExit={false}
           >
             <div ref={refsArray[3]} className={popupStyles.motion}>
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
                 Schedule a Consultation
               </h2>
 

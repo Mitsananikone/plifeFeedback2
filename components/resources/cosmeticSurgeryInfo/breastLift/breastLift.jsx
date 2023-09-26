@@ -77,7 +77,7 @@ export const BreastLiftInfo = React.forwardRef((props) => {
               ref={refsArray[0]} 
               className={popupStyles.motion}
             >
-              <h2 className="font-bold text-xl">
+              <h2 className={popupStyles.infoTitle}>
                 Cosmetic Surgery Breast Lift
               </h2>
 
@@ -120,7 +120,7 @@ export const BreastLiftInfo = React.forwardRef((props) => {
               ref={refsArray[1]} 
               className={popupStyles.motion}
             >
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
                 The Appeal of Breast Lifts
               </h2>
 
@@ -129,7 +129,7 @@ export const BreastLiftInfo = React.forwardRef((props) => {
               </span>
               <br />
 
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
                 Best Candidates for a Breast Lift
               </h2>
 
@@ -138,7 +138,7 @@ export const BreastLiftInfo = React.forwardRef((props) => {
               </span>
               <br />
 
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
                 The Surgical Procedure
               </h2>
 
@@ -165,13 +165,13 @@ export const BreastLiftInfo = React.forwardRef((props) => {
               ref={refsArray[2]} 
               className={popupStyles.motion}
             >
-              <h2 className="font-bold text-xl mt-12"> Recovery and Results </h2>
+              <h2 className={popupStyles.infoTitle}> Recovery and Results </h2>
 
               <span className="text-m flex-wrap">
                 Recovery from a breast lift varies from patient to patient, but most can expect mild discomfort, swelling, and bruising initially. Results are immediately visible, and scars will fade over time, becoming less noticeable.
               </span>
 
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
                 Benefits of a Breast Lift
               </h2>
               <span>
@@ -179,7 +179,7 @@ export const BreastLiftInfo = React.forwardRef((props) => {
               </span>
               <br />
 
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
                 Potential Risks
               </h2>
 
@@ -199,7 +199,7 @@ export const BreastLiftInfo = React.forwardRef((props) => {
               ref={refsArray[3]} 
               className={popupStyles.motion}
             >
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
                 Schedule a Consultation
               </h2>
 

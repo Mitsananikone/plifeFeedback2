@@ -76,7 +76,7 @@ export const RhinoplastyInfo = React.forwardRef((props) => {
             unmountOnExit={false}
           >
             <div ref={refsArray[0]} className={popupStyles.motion}>
-              <h2 className="font-bold text-xl"> Cosmetic Surgery Rhinoplasty</h2>
+            <h2 className={popupStyles.infoTitle}> Cosmetic Surgery Rhinoplasty</h2>
 
               <span className="text-m flex-wrap">
                 <br />Rhinoplasty, commonly known as a nose job, is a surgical procedure that reshapes or resizes the nose. It can correct a variety of concerns including a visible bump, a droopy or protruding tip, a nose that&apos;s too large or wide, or any asymmetry.
@@ -117,7 +117,7 @@ export const RhinoplastyInfo = React.forwardRef((props) => {
             unmountOnExit={false}
           >
             <div ref={refsArray[1]} className={popupStyles.motion}>
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
                 The Appeal of Rhinoplasty
               </h2>
 
@@ -128,7 +128,7 @@ export const RhinoplastyInfo = React.forwardRef((props) => {
               </span>
               <br />
 
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
               Best Candidates for Rhinoplasty
               </h2>
 
@@ -139,7 +139,7 @@ export const RhinoplastyInfo = React.forwardRef((props) => {
         
               <br />
 
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
                 The Surgical Procedure
               </h2>
 
@@ -162,7 +162,7 @@ export const RhinoplastyInfo = React.forwardRef((props) => {
             unmountOnExit={false}
           >
             <div ref={refsArray[2]} className={popupStyles.motion}>
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
                 {" "}
                 Recovery and Results{" "}
               </h2>
@@ -172,7 +172,7 @@ export const RhinoplastyInfo = React.forwardRef((props) => {
 
               </span>
 
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
               Benefits of Rhinoplasty
               </h2>
               <span>
@@ -182,7 +182,7 @@ export const RhinoplastyInfo = React.forwardRef((props) => {
               </span>
               <br />
 
-              <h2 className="font-bold text-xl mt-12">Potential Risks</h2>
+              <h2 className={popupStyles.infoTitle}>Potential Risks</h2>
 
               <span className="text-m flex-wrap">
               As with any surgical procedure, rhinoplasty comes with risks. These include bleeding, infection, unsatisfactory results, breathing difficulties, and anesthesia complications. As always, it&apos;s essential to discuss potential risks with a certified surgeon during consultation.
@@ -199,7 +199,7 @@ export const RhinoplastyInfo = React.forwardRef((props) => {
             unmountOnExit={false}
           >
             <div ref={refsArray[3]} className={popupStyles.motion}>
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
                 Schedule a Consultation
               </h2>
 

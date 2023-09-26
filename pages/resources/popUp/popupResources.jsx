@@ -59,7 +59,8 @@ function PopupResources({ isPopupVisible, onClose, selectedProcedure }) {
     onClose={onClose} 
     width={90} 
     height={90} 
-    measure="%" >
+    measure="%"
+     >
 
       {/* <div className={styles.popup_navMenu}> */}
         <div className={styles.popupMenu}>
@@ -84,25 +85,3 @@ function PopupResources({ isPopupVisible, onClose, selectedProcedure }) {
 }
 
 export default PopupResources;
-
-// {
-//   selectedNavProcedure === "breastLift" && <BreastLiftInfo />;
-// }
-// {
-//   selectedNavProcedure === "breastReduction" && <BreastReductionInfo />;
-// }
-// {
-//   selectedNavProcedure === "faceLift" && <FaceliftInfo />;
-// }
-// {
-//   selectedNavProcedure === "liposuction" && <LiposuctionInfo />;
-// }
-// {
-//   selectedNavProcedure === "trans" && <TransitionInfo />;
-// }
-// {
-//   selectedNavProcedure === "rhinoplasty" && <RhinoplastyInfo />;
-// }
-// {
-//   selectedNavProcedure === "tummyTuck" && <TummyTuckInfo />;
-// }

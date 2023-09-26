@@ -76,7 +76,7 @@ export const LiposuctionInfo = React.forwardRef((props) => {
             unmountOnExit={false}
           >
             <div ref={refsArray[0]} className={popupStyles.motion}>
-              <h2 className="font-bold text-xl"> Cosmetic Surgery Liposuction</h2>
+            <h2 className={popupStyles.infoTitle}> Cosmetic Surgery Liposuction</h2>
 
               <span className="text-m flex-wrap">
                 <br />A liposuction, technically known as rhytidectomy, is a
@@ -115,7 +115,7 @@ export const LiposuctionInfo = React.forwardRef((props) => {
             unmountOnExit={false}
           >
             <div ref={refsArray[1]} className={popupStyles.motion}>
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
                 The Appeal of Liposuction
               </h2>
 
@@ -125,7 +125,7 @@ export const LiposuctionInfo = React.forwardRef((props) => {
               </span>
               <br />
 
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
               Best Candidates for Liposuction
               </h2>
 
@@ -135,7 +135,7 @@ export const LiposuctionInfo = React.forwardRef((props) => {
         
               <br />
 
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
                 The Surgical Procedure
               </h2>
 
@@ -159,7 +159,7 @@ export const LiposuctionInfo = React.forwardRef((props) => {
             unmountOnExit={false}
           >
             <div ref={refsArray[2]} className={popupStyles.motion}>
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
                 {" "}
                 Recovery and Results{" "}
               </h2>
@@ -168,7 +168,7 @@ export const LiposuctionInfo = React.forwardRef((props) => {
               Recovery from liposuction typically involves swelling, bruising, and mild discomfort, but these symptoms gradually diminish. Compression garments are often recommended to reduce swelling and shape the treated area. The final results, revealing a more contoured body profile, can take a few weeks to months as the swelling subsides.
               </span>
 
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
               Benefits of Liposuction
               </h2>
               <span>
@@ -177,7 +177,7 @@ export const LiposuctionInfo = React.forwardRef((props) => {
               </span>
               <br />
 
-              <h2 className="font-bold text-xl mt-12">Potential Risks</h2>
+              <h2 className={popupStyles.infoTitle}>Potential Risks</h2>
 
               <span className="text-m flex-wrap">
               As with any surgical procedure, liposuction comes with risks. These include infection, uneven contours, scarring, fluid accumulation, numbness, and complications related to anesthesia. A thorough consultation with a certified surgeon is vital to understand these risks.
@@ -193,7 +193,7 @@ export const LiposuctionInfo = React.forwardRef((props) => {
             unmountOnExit={false}
           >
             <div ref={refsArray[3]} className={popupStyles.motion}>
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
                 Schedule a Consultation
               </h2>
 

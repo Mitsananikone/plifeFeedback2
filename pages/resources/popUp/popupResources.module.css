@@ -61,54 +61,6 @@
     word-wrap: break-word;
 }
 
-.closePopup {
-    position: absolute;
-    /* Changed from relative to absolute */
-    top: 0px;
-    /* Set the distance from the top edge */
-    right: 0;
-    /* Set the distance from the right edge */
-    background: none;
-    border: none;
-    font-size: 20px;
-    z-index: 99999;
-}
-
-.closePopup:hover {
-    color: #ff5722;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .popup_navMenu {
     /* border: 1px solid orange; */
@@ -194,12 +146,13 @@
         display: flex;
         background-color: white;
         height: 80vh;
+    
     }
     .popup_navMenu {
         display: none; /* Hide the nav menu */
       }
       .popup_info {
-        width: 100%; /* Let the info component take up the full width */
+        width: 60%; /* Let the info component take up the full width */
         margin-top: 0; /* Adjust top margin as needed */
         height: 80vh;
       }
@@ -257,3 +210,8 @@
       }
   }
   
+
+.infoTitle {
+    margin-top: 2em;
+}
+

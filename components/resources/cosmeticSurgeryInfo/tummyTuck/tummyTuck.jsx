@@ -76,7 +76,7 @@ export const TummyTuckInfo = React.forwardRef((props) => {
             unmountOnExit={false}
           >
             <div ref={refsArray[0]} className={popupStyles.motion}>
-              <h2 className="font-bold text-xl">Tummy Tuck Surgery</h2>
+            <h2 className={popupStyles.infoTitle}>Tummy Tuck Surgery</h2>
 
               <span className="text-m flex-wrap">
                 <br />A tummy tuck, medically known as abdominoplasty, is a surgical procedure aimed at removing excess skin and fat from the middle and lower abdomen and tightening the muscles of the abdominal wall. This surgery can greatly reduce the appearance of a protruding abdomen, offering a firmer and smoother profile.
@@ -126,7 +126,7 @@ export const TummyTuckInfo = React.forwardRef((props) => {
             unmountOnExit={false}
           >
             <div ref={refsArray[1]} className={popupStyles.motion}>
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
               The Appeal of Tummy Tucks
               </h2>
 
@@ -139,7 +139,7 @@ export const TummyTuckInfo = React.forwardRef((props) => {
               </span>
               <br />
 
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
               Best Candidates for a Tummy Tuck
               </h2>
 
@@ -151,7 +151,7 @@ export const TummyTuckInfo = React.forwardRef((props) => {
         
               <br />
 
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
                 The Surgical Procedure
               </h2>
 
@@ -178,7 +178,7 @@ export const TummyTuckInfo = React.forwardRef((props) => {
             unmountOnExit={false}
           >
             <div ref={refsArray[2]} className={popupStyles.motion}>
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
                 {" "}
                 Recovery and Results{" "}
               </h2>
@@ -190,7 +190,7 @@ export const TummyTuckInfo = React.forwardRef((props) => {
 
               </span>
 
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
               Benefits of a Tummy Tuck
               </h2>
               <span>
@@ -202,7 +202,7 @@ export const TummyTuckInfo = React.forwardRef((props) => {
               </span>
               <br />
 
-              <h2 className="font-bold text-xl mt-12">Potential Risks</h2>
+              <h2 className={popupStyles.infoTitle}>Potential Risks</h2>
 
               <span className="text-m flex-wrap">
               As with any surgical procedure, there are risks involved, including infection, poor scarring, complications related to anesthesia, and the potential need for revision surgery. Discussing these risks with your surgeon during the consultation is essential.
@@ -221,7 +221,7 @@ export const TummyTuckInfo = React.forwardRef((props) => {
             unmountOnExit={false}
           >
             <div ref={refsArray[3]} className={popupStyles.motion}>
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
                 Schedule a Consultation
               </h2>
 

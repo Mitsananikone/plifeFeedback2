@@ -17,7 +17,9 @@ export const BreastImplantInfo = React.forwardRef((props, ref) => {
   const breastImplantPopupRef = useRef(null);
   const refsArray = [useRef(null), useRef(null), useRef(null), useRef(null)];
 
-  const popupHeight = breastImplantPopupRef.current ? breastImplantPopupRef.current.offsetHeight : 0;
+  const popupHeight = breastImplantPopupRef.current
+    ? breastImplantPopupRef.current.offsetHeight
+    : 0;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,7 +54,10 @@ export const BreastImplantInfo = React.forwardRef((props, ref) => {
 
     return () => {
       if (breastImplantPopupRef.current) {
-        breastImplantPopupRef.current.removeEventListener("scroll", handleScroll);
+        breastImplantPopupRef.current.removeEventListener(
+          "scroll",
+          handleScroll
+        );
       }
     };
   }, [breastImplantPopupRef, refsArray, popupHeight]);
@@ -70,14 +75,11 @@ export const BreastImplantInfo = React.forwardRef((props, ref) => {
           <CSSTransition
             in={showFirstSection}
             timeout={1000}
-    classNames="fade"
-    unmountOnExit={false}
+            classNames="fade"
+            unmountOnExit={false}
           >
-            <div 
-        ref={refsArray[0]} 
-        className={popupStyles.motion}
-       >
-              <h2 className="font-bold text-xl">
+            <div ref={refsArray[0]} className={popupStyles.motion}>
+              <h2 className={popupStyles.infoTitle}>
                 Cosmetic Surgery Breast Enlargement
               </h2>
 
@@ -131,12 +133,8 @@ export const BreastImplantInfo = React.forwardRef((props, ref) => {
             classNames="fade"
             unmountOnExit={false}
           >
-            <div 
-        ref={refsArray[1]} 
-        className={popupStyles.motion}
-  
-    >
-              <h2 className="font-bold text-xl mt-12">
+            <div ref={refsArray[1]} className={popupStyles.motion}>
+            <h2 className={popupStyles.infoTitle}>
                 Cosmetic Surgery Breast Enlargement
               </h2>
 
@@ -152,7 +150,7 @@ export const BreastImplantInfo = React.forwardRef((props, ref) => {
               </span>
               <br />
 
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
                 {" "}
                 Best candidates for breast enlargement
               </h2>
@@ -165,7 +163,7 @@ export const BreastImplantInfo = React.forwardRef((props, ref) => {
               </span>
               <br />
 
-              <h2 className="font-bold text-xl mt-12"> Surgical procedure</h2>
+              <h2 className={popupStyles.infoTitle}> Surgical procedure</h2>
 
               <span className="text-m flex-wrap">
                 The operation is carried out under general anesthetic, and
@@ -210,12 +208,8 @@ export const BreastImplantInfo = React.forwardRef((props, ref) => {
             classNames="fade"
             unmountOnExit={false}
           >
-           <div 
-        ref={refsArray[2]} 
-        className={popupStyles.motion}
-  
-    >
-              <h2 className="font-bold text-xl mt-12"> Incisions</h2>
+            <div ref={refsArray[2]} className={popupStyles.motion}>
+            <h2 className={popupStyles.infoTitle}> Incisions</h2>
 
               <span className="text-m flex-wrap">
                 The inframammary incision is placed in the proximity of the
@@ -223,7 +217,7 @@ export const BreastImplantInfo = React.forwardRef((props, ref) => {
                 *missing*
               </span>
 
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
                 Benefits of breast enlargement
               </h2>
               <span>
@@ -236,14 +230,14 @@ export const BreastImplantInfo = React.forwardRef((props, ref) => {
                 Generally, most patients benefit by having boosts in the
                 self-confidence, and femininity.
               </span>
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
                 Best candidates for breast enlargement
               </h2>
               <span>
                 The best candidates for breast surgery are women who are
                 emotionally well adjusted and who have a thorough understanding
                 of the procedure. They are in good health, have a history of
-                physical activity, and eat a healthy diet. 
+                physical activity, and eat a healthy diet.
               </span>
               <br />
               <br />
@@ -257,13 +251,7 @@ export const BreastImplantInfo = React.forwardRef((props, ref) => {
             classNames="fade"
             unmountOnExit={false}
           >
-            <div 
-        ref={refsArray[3]} 
-        className={popupStyles.motion}
-
-    >
-       
-            </div>
+            <div ref={refsArray[3]} className={popupStyles.motion}></div>
           </CSSTransition>
         </div>
       </div>

@@ -76,7 +76,7 @@ export const TransitionInfo = React.forwardRef((props) => {
             unmountOnExit={false}
           >
             <div ref={refsArray[0]} className={popupStyles.motion}>
-              <h2 className="font-bold text-xl">  Gender Affirming Surgery</h2>
+            <h2 className={popupStyles.infoTitle}>  Gender Affirming Surgery</h2>
 
               <span className="text-m flex-wrap">
                 <br />Gender affirming surgery, also known as gender confirmation or transition surgery, is a range of medical procedures that transgender, non-binary, and gender-diverse individuals might undergo to align their physical appearance with their gender identity. These surgeries can be a significant step in a person&apos;s gender transition journey.
@@ -121,7 +121,7 @@ export const TransitionInfo = React.forwardRef((props) => {
             unmountOnExit={false}
           >
             <div ref={refsArray[1]} className={popupStyles.motion}>
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
               The Importance of Gender Affirming Surgery
               </h2>
 
@@ -133,7 +133,7 @@ export const TransitionInfo = React.forwardRef((props) => {
               </span>
               <br />
 
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
               Best Candidates for Gender Affirming Surgery
               </h2>
 
@@ -145,7 +145,7 @@ export const TransitionInfo = React.forwardRef((props) => {
         
               <br />
 
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
                 The Surgical Procedure
               </h2>
 
@@ -173,7 +173,7 @@ export const TransitionInfo = React.forwardRef((props) => {
             unmountOnExit={false}
           >
             <div ref={refsArray[2]} className={popupStyles.motion}>
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
                 {" "}
                 Recovery and Results{" "}
               </h2>
@@ -184,7 +184,7 @@ export const TransitionInfo = React.forwardRef((props) => {
 
               </span>
 
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
               Benefits of Gender Affirming Surgery
               </h2>
               <span>
@@ -195,7 +195,7 @@ export const TransitionInfo = React.forwardRef((props) => {
               </span>
               <br />
 
-              <h2 className="font-bold text-xl mt-12">Potential Risks</h2>
+              <h2 className={popupStyles.infoTitle}>Potential Risks</h2>
 
               <span className="text-m flex-wrap">
               As with any surgical procedure, there are inherent risks such as bleeding, infection, complications from anesthesia, unsatisfactory results, and complications specific to the type of surgery. A thorough consultation with a specialized surgeon is crucial to understand all potential risks.
@@ -213,7 +213,7 @@ export const TransitionInfo = React.forwardRef((props) => {
             unmountOnExit={false}
           >
             <div ref={refsArray[3]} className={popupStyles.motion}>
-              <h2 className="font-bold text-xl mt-12">
+              <h2 className={popupStyles.infoTitle}>
                 Schedule a Consultation
               </h2>
 

@@ -169,12 +169,12 @@
     .mainContainer{
         height:300vh;
         width: 100vw;
-        border: 1px solid red;
+
         overflow: visible;
     }
 
     .procedureContainer {
-        height:300vh;
+        height:500vh;
     }
     .procedureContainer .title {
         margin-top: 50px;
