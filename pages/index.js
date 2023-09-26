@@ -7,13 +7,12 @@ import PricingPage from '@/pages/pricing/pricingPage';
 export default function Home() {
   return (
     <>
-      {/* <LandingPopup /> */}
+       <LandingPopup /> 
       <div className="screenSize">
         <div className="full-flex-centered">
 
-          {/* <LandingPage /> */}
-<PricingPage/>
-        {/* <FAQPage/> */}
+           <LandingPage /> 
+
         </div>
       </div>
 
