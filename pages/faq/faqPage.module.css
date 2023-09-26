@@ -17,17 +17,30 @@
 
 .faqContent {
     margin-inline: 2rem;
+
 }
 
 .question {
-    font-weight: bold;
+    cursor: pointer;
+    font-weight: 500;
     margin-top: 1.5rem;
+}
+
+.arrowIcon {
+    margin-left: 10px;
 }
 
 .answer {
     margin-top: 0.5rem;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
 }
-
+.faqContent div:hover .answer {
+    opacity: 1;
+    max-height: 200px; /* Adjust as needed */
+}
 /* Media Queries */
 @media screen and (min-width: 1440px) {
     .faqContainer {

@@ -2,7 +2,16 @@ import React from 'react';
 import styles from'./faqPage.module.css';
 
 const FAQPage = () => {
+    const [visibleAnswerIndex, setVisibleAnswerIndex] = React.useState(null);
 
+    const handleQuestionClick = (index) => {
+      if (visibleAnswerIndex === index) {
+        setVisibleAnswerIndex(null); // Collapse the currently open answer
+      } else {
+        setVisibleAnswerIndex(index); // Show the clicked answer
+      }
+    };
+    
     const faqs = [
         {
             question: "What exactly is included in the \"all-in-one\" solution package?",
@@ -53,17 +62,21 @@ const FAQPage = () => {
             <img src="/images/faq/faqBanner.jpg" alt="Banner" className={styles.faqBanner}/>
             <h1 className={styles.faqTitle}>Frequently Asked Questions</h1>
             <div className={styles.faqContent}>
-            {faqs.map((faq, index) => (
-                <div key={index}>
-                    <div className={styles.question}>
-                        {index + 1}. {faq.question}
-                    </div>
-                    <div className={styles.answer}>
-                        {faq.answer}
-                    </div>
-                </div>
-            ))}
+    {faqs.map((faq, index) => (
+        <div key={index}>
+            <div 
+                className={styles.question} 
+                onClick={() => handleQuestionClick(index)}
+            >
+                {index + 1}. {faq.question}
+                <span className={styles.arrowIcon}>&#x25BC;</span> {/* Arrow Down Icon */}
+            </div>
+            <div className={styles.answer} style={{ display: visibleAnswerIndex === index ? 'block' : 'none' }}>
+                {faq.answer}
+            </div>
         </div>
+    ))}
+</div>
    </div>
     );
 }
