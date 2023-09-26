@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import TreatmentCard from "@/components/resources/treatmentCard/treatmentCard";
 import styles from "./resourcePage.module.css";
-import PopupAllSurgeries from "@/pages/resources/popUp/popUpResources";
+import PopupAllSurgeries from "@/pages/resources/popUp/popupResources";
 
 export default function ResourcePage() {
   const [isPopupVisible, setIsPopupVisible] = useState(false);
